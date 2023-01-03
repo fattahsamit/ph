@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        label{
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generic Food Delivery Service</h1>
+    <h2>Please, fill out the following form</h2>
+    <form>
+        <label for="name">Name:
+            <input id="name" type="text" placeholder="Enter your name">
+        </label>
+
+        <label for="email">E-mail:
+            <input id="email" type="email" placeholder="Enter your e-mail address">
+        </label>
+        
+        <label for="phone">Number:
+            <input id="phone" type="number" placeholder="Enter your phone number">
+        </label>
+        
+        <h2>Your Order</h2>
+        <fieldset>
+            <legend>Select one or more food</legend>
+            <label for="burger">
+                <input type="checkbox" name="food" id="burger">
+                Burger
+            </label>
+            <label for="pizza">
+                <input type="checkbox" name="food" id="pizza">
+                Pizza
+            </label>
+            <label for="shawarma">
+                <input type="checkbox" name="food" id="shawarma">
+                Shawarma
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select one flavor of Ice-cream as dessert</legend>
+            <label for="chocolate">
+                <input type="radio" name="flavor" id="chocolate">
+                Chocolate
+            </label>
+            <label for="vanilla">
+                <input type="radio" name="flavor" id="vanilla">
+                Vanilla 
+            </label>
+            <label for="strawberry">
+                <input type="radio" name="flavor" id="strawberry">
+                Strawberry 
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Special Instruction</legend>
+            <textarea name="special-instruction" id="special" cols="50" rows="3"></textarea>
+        </fieldset>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Confirm">
+    </form>
+</body>
+</html>
