@@ -3,6 +3,14 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.header {
+  background: #fff8f3;
+  background-image: url("../images/header_bg.png"),
+    url("../images/developer.png");
+  background-repeat: no-repeat;
+  background-position: bottom right, left;
+}
+
 #text-orange {
   color: #fd6e0a;
 }
@@ -18,7 +26,7 @@
   border-radius: 5px;
 }
 
-/* Header and navigation styles */
+/* navigation styles */
 .nav-title {
   font-weight: 800;
   font-size: 45px;
