@@ -7,7 +7,7 @@
   color: #fd6e0a;
 }
 
-.btn-nav {
+.btn-primary {
   font-size: 20px;
   font-weight: 700;
   color: #ffffff;
@@ -38,4 +38,31 @@ nav ul {
 nav li {
   list-style: none;
   margin-left: 50px;
+}
+
+/* Banner styles */
+.banner {
+  display: flex;
+  align-items: center;
+  margin: 0 200px;
+}
+
+.banner-sub-title {
+  font-weight: 600;
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+
+.banner-title {
+  font-weight: 700;
+  font-size: 85px;
+  margin-bottom: 20px;
+}
+
+.banner-description {
+  color: #757575;
+  /* Default font weight is 400 for the font we embedded */
+  /* font-weight: 400; */
+  font-size: 18px;
+  margin-bottom: 30px;
 }
