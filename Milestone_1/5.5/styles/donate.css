@@ -2,35 +2,35 @@
   margin: 0;
 }
 
-/* header banner */
+/* banner */
+
 header {
   text-align: center;
   color: #ffffff;
-  height: 625px;
-  width: 1366px;
+  height: 100%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-blend-mode: darken;
   background-image: url("../images/donation13.jpg");
 }
 
 .banner {
-  padding: 150px 260px;
-  height: 320px;
-  width: 820px;
+  padding: 160px 20%;
 }
 
-.banner h1 {
+.section-title {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 65px;
   margin-bottom: 20px;
 }
 
-.banner p {
+.section-description {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-family: "Poppins";
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .btn-primary {
@@ -39,8 +39,27 @@ header {
   color: #ffffff;
   font-weight: 600;
   font-size: 20px;
-  height: 50px;
-  padding: 0 20px;
+  padding: 16px 25px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+/* Donate Today */
+.donation {
+  text-align: center;
+  padding: 200px 20%;
+}
+
+.section-title2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.section-description2 {
+  font-family: "Poppins", sans-serif;
+  color: #707070;
+  font-size: 18px;
+  margin-bottom: 50px;
 }
