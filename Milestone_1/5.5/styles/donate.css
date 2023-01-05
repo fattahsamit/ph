@@ -143,3 +143,32 @@ hr {
 .education {
   background-color: #fff4d6;
 }
+
+/* Reason 1 */
+.reason {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  padding: 0 200px 100px 200px;
+}
+
+.reason1-text,
+.reason2-text {
+  text-align: left;
+}
+
+.reason2-text .section-description2 {
+  margin-bottom: 20px;
+}
+.reason1-text .section-description2 {
+  margin-bottom: 20px;
+}
+
+.reason img {
+  height: 600px;
+  width: 600px;
+  border-radius: 10px;
+}
