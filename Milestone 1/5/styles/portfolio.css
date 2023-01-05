@@ -83,6 +83,7 @@ main {
 
 /* About Section Styles */
 .about {
+  text-align: center;
   margin-top: 130px;
   background: #fff8f3;
   border-radius: 10px;
@@ -90,13 +91,30 @@ main {
 }
 
 .section-title {
-  text-align: center;
+  font-weight: 700;
+  font-size: 35px;
   margin-bottom: 30px;
 }
 
 .section-description {
   font-size: 18px;
-  text-align: center;
   color: #757575;
   margin-bottom: 30px;
+}
+
+/* About info container */
+.about-info-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about .info-title {
+  color: #757575;
+  font-size: 20px;
+}
+
+.about .info-description {
+  color: #474747;
+  font-weight: 700;
+  font-size: 20px;
 }
