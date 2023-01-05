@@ -39,7 +39,7 @@ header {
   color: #ffffff;
   font-weight: 600;
   font-size: 20px;
-  padding: 16px 25px;
+  padding: 16px 35px;
   border: none;
   border-radius: 5px;
 }
@@ -47,11 +47,13 @@ header {
 /* Donate Today */
 .donation {
   text-align: center;
+  font-family: "Inter", sans-serif;
   padding: 200px 20%;
+  height: 485px;
+  width: 765px;
 }
 
 .section-title2 {
-  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 45px;
   margin-bottom: 20px;
@@ -62,4 +64,27 @@ header {
   color: #707070;
   font-size: 18px;
   margin-bottom: 50px;
+}
+
+.amount {
+  display: flex;
+  gap: 24px;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+.taka {
+  color: #707070;
+  font-weight: 700;
+  font-size: 30px;
+  background: #fafafa;
+  padding: 40px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.de {
+  background: #ffeeee;
+  color: #ff5959;
+  border: 2px solid #ff5959;
 }
