@@ -7,8 +7,6 @@
 header {
   text-align: center;
   color: #ffffff;
-  height: 100%;
-  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: darken;
@@ -16,7 +14,7 @@ header {
 }
 
 .banner {
-  padding: 160px 20%;
+  padding: 160px 190px;
 }
 
 .section-title {
@@ -47,9 +45,8 @@ header {
 .donation {
   text-align: center;
   font-family: "Inter", sans-serif;
-  padding: 200px 20%;
-  height: 485px;
-  width: 765px;
+  padding: 130px 300px;
+  border: #707070 solid;
 }
 
 .section-title2 {
@@ -98,4 +95,11 @@ header {
 hr {
   color: #bababa;
   margin-bottom: 30px;
+}
+
+/* Donate Plan */
+.plan {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  margin: 90px 100px;
 }
