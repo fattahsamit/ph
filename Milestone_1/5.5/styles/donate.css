@@ -46,10 +46,10 @@ header {
   text-align: center;
   font-family: "Inter", sans-serif;
   padding: 130px 300px;
-  border: #707070 solid;
 }
 
 .section-title2 {
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 45px;
   margin-bottom: 20px;
@@ -101,5 +101,45 @@ hr {
 .plan {
   text-align: center;
   font-family: "Inter", sans-serif;
-  margin: 90px 100px;
+  padding: 0 200px 20px 200px;
+}
+
+.option {
+  display: flex;
+  gap: 24px;
+  justify-content: space-around;
+  margin-bottom: 60px;
+  padding: 10px 130px 50px 130px;
+}
+
+.options {
+  border-radius: 5px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.options .section-title2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.options .section-description2 {
+  font-size: 16px;
+}
+
+.options img {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.food {
+  background-color: #4f9da61a;
+}
+
+.shelter {
+  background-color: #ff59591a;
+}
+
+.education {
+  background-color: #fff4d6;
 }
