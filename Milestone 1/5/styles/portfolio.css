@@ -81,10 +81,13 @@ main {
   margin: 0 auto;
 }
 
+section {
+  margin-top: 130px;
+}
+
 /* About Section Styles */
 .about {
   text-align: center;
-  margin-top: 130px;
   background: #fff8f3;
   border-radius: 10px;
   padding: 130px 150px;
@@ -94,7 +97,7 @@ main {
   text-align: center;
   font-weight: 700;
   font-size: 35px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .section-description {
@@ -122,9 +125,6 @@ main {
 }
 
 /* What I do styles */
-.what-i-do {
-  margin-top: 130px;
-}
 
 .skills-container {
   display: flex;
@@ -149,4 +149,39 @@ main {
 .skill-description {
   font-size: 16px;
   color: #757575;
+}
+
+/* Resume Styles */
+.resume-content {
+  display: flex;
+  gap: 24px;
+}
+
+.resume-item {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.resume .title {
+  color: #474747;
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.resume .sub-title {
+  color: #757575;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.resume .description {
+  color: #757575;
+  font-size: 16px;
+}
+
+.resume-button {
+  margin-top: 50px;
+  text-align: center;
 }
