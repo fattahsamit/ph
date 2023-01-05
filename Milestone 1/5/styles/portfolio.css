@@ -185,3 +185,32 @@ section {
   margin-top: 50px;
   text-align: center;
 }
+
+/* Contact Styles */
+.contact {
+  display: flex;
+  gap: 100px;
+  background: #fff8f3;
+  padding: 130px 200px;
+}
+
+.contact .section-title {
+  text-align: left;
+}
+
+.contact input[type="text"],
+input[type="email"],
+textarea {
+  margin-bottom: 24px;
+  padding: 18px 30px;
+  border: 0;
+  width: 100%;
+}
+
+input {
+  height: 64px;
+}
+
+.contact a {
+  text-decoration: none;
+}
