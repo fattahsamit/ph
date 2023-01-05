@@ -41,6 +41,10 @@ header {
   border-radius: 5px;
 }
 
+.btn-primary:hover {
+  background: #d04949;
+}
+
 /* Donate Today */
 .donation {
   text-align: center;
@@ -65,7 +69,7 @@ header {
 .amount {
   display: flex;
   gap: 24px;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 60px;
 }
 
@@ -107,7 +111,7 @@ hr {
 .option {
   display: flex;
   gap: 24px;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 60px;
   padding: 10px 130px 50px 130px;
 }
@@ -136,18 +140,30 @@ hr {
   background-color: #4f9da61a;
 }
 
+.food:hover {
+  background-color: #4f9da641;
+}
+
 .shelter {
   background-color: #ff59591a;
+}
+
+.shelter:hover {
+  background-color: #ff59593d;
 }
 
 .education {
   background-color: #fff4d6;
 }
 
+.education:hover {
+  background-color: #ffeaae;
+}
+
 /* Reason 1 */
 .reason {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 60px;
   text-align: center;
@@ -168,15 +184,16 @@ hr {
 }
 
 .reason img {
-  height: 600px;
-  width: 600px;
+  height: 400px;
+  width: 400px;
   border-radius: 10px;
 }
 
 /* Get my Updates */
 .updates {
   text-align: center;
-  padding: 130px 300px;
+  /* padding: 130px 300px; */
+  padding: 0 300px 130px 300px;
 }
 
 .updates-text {
