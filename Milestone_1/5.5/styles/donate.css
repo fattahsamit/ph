@@ -201,6 +201,8 @@ hr {
 }
 
 .mail {
+  display: flex;
+  justify-content: center;
   padding: 130px 300px;
   background: #fff4d6;
 }
