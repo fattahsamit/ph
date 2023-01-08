@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      h1:hover {
+        color: skyblue;
+        background-color: rgb(17, 45, 84);
+      }
+      .middle:focus {
+        color: red;
+        font-weight: 700;
+      }
+      a:visited {
+        color: red;
+      }
+      li:first-child {
+        color: chocolate;
+      }
+      li:last-child {
+        color: greenyellow;
+      }
+      li:nth-child(n) {
+        background-color: antiquewhite;
+      }
+      /* even */
+      li:nth-child(2n) {
+        background-color: slategrey;
+      }
+      /* odd */
+      li:nth-child(2n + 1) {
+        border: 1px solid red;
+      }
+    </style>
+    <title>pseudo</title>
+  </head>
+  <body>
+    <h1>This is normal</h1>
+    <input type="text" />
+    <input class="middle" type="text" />
+    <input type="text" />
+    <br />
+    <a href="https://www.google.com">google</a>
+    <a
+      href="https://www.popularmechanics.com/military/weapons/a23149/winchester-rifle/"
+      >never visited</a
+    >
+    <br />
+    <ul>
+      <li>alia</li>
+      <li>balia</li>
+      <li>salia</li>
+      <li>dalia</li>
+      <li>kalia</li>
+      <li>calia</li>
+      <li>malia</li>
+      <li>zalia</li>
+    </ul>
+  </body>
+</html>
