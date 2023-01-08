@@ -33,6 +33,16 @@
       li:nth-child(2n + 1) {
         border: 1px solid red;
       }
+
+      /* pseudo element */
+      h3::before {
+        content: "hello ";
+      }
+      .special::after {
+        content: " and goodbye";
+        color: red;
+        font-size: 30px;
+      }
     </style>
     <title>pseudo</title>
   </head>
@@ -48,6 +58,12 @@
       >never visited</a
     >
     <br />
+    <h3 class="special">middle sized header 1</h3>
+    <h3>middle sized header 2</h3>
+    <h3 class="special">middle sized header 3</h3>
+    <h3>middle sized header 4</h3>
+    <h3 class="special">middle sized header 5</h3>
+    <h3>middle sized header 6</h3>
     <ul>
       <li>alia</li>
       <li>balia</li>
