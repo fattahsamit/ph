@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- [1] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* [4] */
+      body {
+        max-width: 1200px;
+        margin: 0 auto;
+        /* border: 1px solid salmon; */
+      }
+      /* [2] */
+      h1 {
+        font-size: 10vw;
+      }
+      /* [3] */
+      .panda img {
+        width: 100%;
+      }
+      /* [5] */
+      .container-two {
+        display: flex;
+      }
+      .container-two .split {
+        width: 50%;
+      }
+      /* make image responsive inside */
+      .split img {
+        width: 100%;
+      }
+
+      /* [6] */
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .food {
+        border: 2px solid rgb(228, 124, 45);
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .food img {
+        width: 100%;
+      }
+      /* Smaller screen */
+      @media screen and (max-width: 576px) {
+        .container-two {
+          flex-direction: column-reverse;
+        }
+        .container-two .split {
+          width: 100%;
+        }
+
+        .container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        /* Medium screen */
+      }
+      @media screen and (min-width: 577px) and (max-width: 992px) {
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. Viewport meta tag
+         2. CSS relative unit (em % vw)
+         3. Responsive Image (fluid image)
+         4. Body max-width and margin auto
+         5. Responsive split screen using flex (2 column section)
+         6. Grid Responsive (Multi column)
+         7. Responsive Menu (Bootstrap) --in future with js and react -->
+
+    <section><h1>My Responsive Website</h1></section>
+    <section class="panda">
+      <h3>Panda</h3>
+      <img src="images/panda1.jpg" alt="panda" />
+    </section>
+
+    <section>
+      <h2>Two Parts</h2>
+      <div class="container-two">
+        <div class="split"><img src="images/food.jpg" alt="food" /></div>
+        <div class="split"><img src="images/panda2.jpg" alt="panda" /></div>
+      </div>
+    </section>
+
+    <!-- [6] -->
+    <section class="multi-column">
+      <div class="container">
+        <div class="food">
+          <img src="images/food.jpg" alt="food" />
+          <h2>Item-1</h2>
+          <h4>price: 100</h4>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
+            sequi commodi quos adipisci ea! Placeat error velit consectetur
+            quasi nobis quaerat facilis culpa? Provident a optio perspiciatis
+            repudiandae, vitae odio!
+          </p>
+          <button>Order Now</button>
+        </div>
+        <div class="food">
+          <img src="images/food.jpg" alt="food" />
+          <h2>Item-2</h2>
+          <h4>price: 200</h4>
+          <p>
+            Dolores non maxime est aperiam, corporis nulla modi accusamus atque
+            ab facere et dolorem quisquam aliquam harum veniam optio dolore unde
+            maiores dolor. Porro recusandae sed rerum sapiente reiciendis dolor?
+          </p>
+          <button>Order Now</button>
+        </div>
+        <div class="food">
+          <img src="images/food.jpg" alt="food" />
+          <h2>Item-3</h2>
+          <h4>price: 300</h4>
+          <p>
+            Nobis necessitatibus voluptate magni consequuntur. A ipsa mollitia
+            laboriosam porro repellat accusantium recusandae, non ea, quam
+            molestiae magni quas? Aliquid alias fugiat deleniti nam magni
+            laborum ipsam, saepe vitae quia!
+          </p>
+          <button>Order Now</button>
+        </div>
+        <div class="food">
+          <img src="images/food.jpg" alt="food" />
+          <h2>Item-4</h2>
+          <h4>price: 400</h4>
+          <p>
+            Reprehenderit voluptas nobis obcaecati quae nisi vero provident
+            fugit, nam officia? Porro voluptatem quisquam et saepe minus ipsa,
+            dolor sunt quam deserunt nam eius pariatur consectetur eveniet
+            veniam hic iure.
+          </p>
+          <button>Order Now</button>
+        </div>
+        <div class="food">
+          <img src="images/food.jpg" alt="food" />
+          <h2>Item-5</h2>
+          <h4>price: 500</h4>
+          <p>
+            Necessitatibus hic, sint esse excepturi exercitationem ratione
+            repellendus ut? Quisquam esse et sequi odit sed deserunt voluptatem
+            nobis magni, voluptas asperiores fuga, rerum cupiditate vero saepe
+            ullam explicabo, ea numquam!
+          </p>
+          <button>Order Now</button>
+        </div>
+        <div class="food">
+          <img src="images/food.jpg" alt="food" />
+          <h2>Item-6</h2>
+          <h4>price: 600</h4>
+          <p>
+            Modi velit nisi blanditiis praesentium reprehenderit consequatur
+            vitae sequi, nemo, qui veritatis perferendis architecto vero eum
+            expedita aut molestias laboriosam deleniti minus! Facilis
+            voluptatum, alias quod est minus quam voluptate?
+          </p>
+          <button>Order Now</button>
+        </div>
+        <div class="food">
+          <img src="images/food.jpg" alt="food" />
+          <h2>Item-7</h2>
+          <h4>price: 700</h4>
+          <p>
+            Quibusdam dolore saepe architecto aperiam maiores! Culpa impedit
+            totam accusantium iusto aliquid officiis distinctio est saepe nihil,
+            harum tempora facere ullam id quaerat quae error, optio earum cum a
+            vel?
+          </p>
+          <button>Order Now</button>
+        </div>
+        <div class="food">
+          <img src="images/food.jpg" alt="food" />
+          <h2>Item-8</h2>
+          <h4>price: 800</h4>
+          <p>
+            Tempora, autem aspernatur? Nulla accusantium magnam beatae.
+            Recusandae nihil necessitatibus commodi magnam facilis, minus unde
+            adipisci fugiat delectus! Consequatur tenetur modi quis est. Labore
+            quam ullam, velit itaque corrupti quia!
+          </p>
+          <button>Order Now</button>
+        </div>
+        <div class="food">
+          <img src="images/food.jpg" alt="food" />
+          <h2>Item-9</h2>
+          <h4>price: 900</h4>
+          <p>
+            Ducimus dignissimos magni nostrum est qui! Unde iusto consequuntur
+            modi itaque qui odit provident voluptatem maiores, praesentium enim
+            fuga fugit facilis architecto consequatur, ratione repellendus
+            minima quis velit nobis veritatis!
+          </p>
+          <button>Order Now</button>
+        </div>
+        <div class="food">
+          <img src="images/food.jpg" alt="food" />
+          <h2>Item-10</h2>
+          <h4>price: 1000</h4>
+          <p>
+            Illo dolorem perferendis velit veniam! Nostrum perspiciatis
+            architecto doloremque nesciunt assumenda, accusamus recusandae
+            incidunt est deleniti delectus temporibus qui ipsa officiis mollitia
+            fugiat vero impedit ut porro, at ducimus dolores?
+          </p>
+          <button>Order Now</button>
+        </div>
+        <div class="food">
+          <img src="images/food.jpg" alt="food" />
+          <h2>Item-11</h2>
+          <h4>price: 1100</h4>
+          <p>
+            Praesentium quasi labore, ducimus quo porro inventore doloremque
+            quidem? Eveniet unde possimus nostrum dicta illum sed tempora,
+            consequuntur, aperiam consectetur repellat ratione labore in
+            perspiciatis distinctio illo deserunt asperiores. Sequi?
+          </p>
+          <button>Order Now</button>
+        </div>
+        <div class="food">
+          <img src="images/food.jpg" alt="food" />
+          <h2>Item-12</h2>
+          <h4>price: 1200</h4>
+          <p>
+            Sequi aliquid sapiente voluptatum perspiciatis maiores ex, rem harum
+            nisi ullam voluptatem quidem eaque dolor nihil eligendi, veritatis
+            velit totam? Quo, voluptates cupiditate officiis ipsa iusto aliquam
+            fugit deleniti. Odit.
+          </p>
+          <button>Order Now</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
