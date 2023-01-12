@@ -261,7 +261,9 @@ input {
 /* Medium Device */
 @media screen and (min-width: 577px) and (max-width: 992px) {
   .about,
-  .contact {
+  .contact,
+  .skills-container,
+  .resume-content {
     padding: 20px;
   }
   nav,
