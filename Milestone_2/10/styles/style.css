@@ -1,7 +1,11 @@
-/* Fonts */
+/* ---------------
+    Fonts
+------------------ */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
-/* Common Styles or Utilities*/
+/* -----------------------------
+    Common Styles or Utilities
+--------------------------------*/
 body {
   font-family: "Poppins", sans-serif;
   background: #f3f1ff;
@@ -14,11 +18,16 @@ main {
   background: #ffffff;
   width: 870px;
   padding: 30px;
+  border-radius: 5px;
 }
 hr {
   border: 1px solid #d1d1d1;
+  margin-bottom: 27px;
 }
-/* Top Players Style */
+
+/* --------------------
+    Top Players Style
+----------------------- */
 .top-players {
   margin-bottom: 30px;
 }
@@ -44,4 +53,37 @@ hr {
 .player-name {
   margin-left: 16px;
   font-size: 18px;
+}
+
+/* ---------------------
+    Top Blogs Style
+------------------------ */
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-row-gap: 26px; */
+  row-gap: 26px;
+}
+.blog {
+  display: flex;
+}
+.blog .thumbnail img {
+  width: 177px;
+  height: 117px;
+}
+.blog-info {
+  margin-left: 16px;
+}
+.blog-title {
+  font-size: 20px;
+}
+.blog-author {
+  font-weight: 400;
+  font-size: 16px;
+  color: #9f9f9f;
+}
+.blog-author a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #562eff;
 }
