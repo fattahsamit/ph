@@ -15,22 +15,33 @@ main {
   width: 870px;
   padding: 30px;
 }
-
+hr {
+  border: 1px solid #d1d1d1;
+}
 /* Top Players Style */
+.top-players {
+  margin-bottom: 30px;
+}
 .section-title {
   font-size: 24px;
   color: #562eff;
+  margin-top: 3px;
 }
 .players {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  row-gap: 30px;
 }
 .player {
   display: flex;
   align-items: center;
-  gap: 16px;
+  /* gap: 16px; */
 }
 .players img {
   width: 56px;
   height: 56px;
+}
+.player-name {
+  margin-left: 16px;
+  font-size: 18px;
 }
