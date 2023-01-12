@@ -234,7 +234,11 @@ input {
   nav ul {
     flex-direction: column;
     gap: 20px;
+    padding-left: 20px;
     align-items: flex-start;
+  }
+  nav li {
+    margin-left: 0;
   }
   .banner {
     margin: 0 20px;
@@ -254,18 +258,30 @@ input {
   }
 }
 
+/* Medium Device */
 @media screen and (min-width: 577px) and (max-width: 992px) {
   .about,
   .contact {
     padding: 20px;
   }
-  .contact {
+  nav,
+  .contact,
+  .banner {
     flex-direction: column;
   }
   .contact input[type="text"],
   input[type="email"],
   textarea {
     padding: 0 0 0 5px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 0;
+    align-items: flex-start;
+  }
+  nav li {
+    margin-left: 0;
   }
 }
 
