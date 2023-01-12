@@ -2,6 +2,7 @@
     Fonts
 ------------------ */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 /* -----------------------------
     Common Styles or Utilities
@@ -93,13 +94,32 @@ hr {
 /* ---------------------
     Latest Courses
 ------------------------ */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  font-family: "Roboto", sans-serif;
+}
+.course {
+  width: 253px;
+}
 .course .course-banner img {
   width: 224px;
   height: 104px;
 }
+.course-title {
+  font-size: 20px;
+  color: #1e1e1e;
+}
+.course-author {
+  font-weight: 400;
+  font-size: 15px;
+  color: #ed6b4f;
+}
 .course-info {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .fa-star {
   font-size: 12px;
@@ -109,4 +129,15 @@ hr {
 }
 .fa-star.empty {
   color: #aeaeae;
+}
+.course-rating {
+  font-weight: 400;
+  font-size: 15px;
+  color: #a2a2a2;
+}
+.course-duration {
+  background: #ffe4e8;
+  border-radius: 15px;
+  color: #ff4a60;
+  padding: 5px;
 }
