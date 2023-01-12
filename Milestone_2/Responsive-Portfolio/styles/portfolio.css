@@ -217,6 +217,11 @@ input {
 
 /* Responsive Styles */
 @media screen and (max-width: 576px) {
+  .header {
+    background-image: none;
+  }
+  nav,
+  .banner,
   .about-info-container,
   .skills-container,
   .resume-content,
@@ -224,6 +229,18 @@ input {
     flex-direction: column;
     gap: 20px;
     padding: 10px 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .banner {
+    margin: 0 20px;
+  }
+  .banner img {
+    width: 100%;
   }
   .about,
   .contact {
@@ -252,6 +269,6 @@ input {
   }
 }
 
-.hide {
+/* .hide {
   display: none;
-}
+} */
