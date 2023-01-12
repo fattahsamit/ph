@@ -217,10 +217,15 @@ input {
 
 /* Responsive Styles */
 @media screen and (max-width: 576px) {
+  .about-info-container,
   .skills-container,
   .resume-content {
     flex-direction: column;
+    gap: 20px;
     padding: 10px 20px;
+  }
+  .about {
+    padding: 20px;
   }
 }
 
