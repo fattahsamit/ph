@@ -7,6 +7,34 @@
 }
 
 /* -------------------------
+    Nav-bar Section
+---------------------------- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 120px 40px 120px;
+}
+.nav-title {
+  font-weight: 700;
+  font-size: 24px;
+  color: #3a3a3a;
+}
+.nav-others {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 16px;
+  color: #3a3a3a;
+}
+.nav-others ul {
+  display: flex;
+  gap: 35px;
+}
+.nav-others ul li {
+  list-style: none;
+}
+
+/* -------------------------
     Banner Section
 ---------------------------- */
 .banner {
