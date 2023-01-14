@@ -155,15 +155,12 @@
     Featured products
 ---------------------------- */
 .featured {
-  margin: 0 165px 100px 165px;
+  padding: 0 165px 100px 165px;
 }
 .featured-container {
   display: flex;
   gap: 100px;
   align-content: center;
-}
-.featured-image {
-  display: flex;
 }
 .featured-info {
   display: flex;
@@ -184,6 +181,7 @@
   width: 155px;
   border-radius: 0;
 }
+
 /* -------------------------
     Media Query
 ---------------------------- */
@@ -216,5 +214,25 @@
   }
   .collection-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .featured {
+    padding: 0 10px;
+  }
+  .featured-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .featured-info {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .featured-image {
+    justify-content: center;
+    align-items: center;
+  }
+  .featured-image img {
+    width: 100%;
   }
 }
