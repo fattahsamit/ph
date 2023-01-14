@@ -5,9 +5,6 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
-.hide {
-  display: none;
-}
 
 /* -------------------------
     Nav-bar Section
@@ -154,6 +151,39 @@
   color: #e02c6d;
 }
 
+/* -------------------------
+    Featured products
+---------------------------- */
+.featured {
+  margin: 0 165px 100px 165px;
+}
+.featured-container {
+  display: flex;
+  gap: 100px;
+  align-content: center;
+}
+.featured-image {
+  display: flex;
+}
+.featured-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.featured-title {
+  font-weight: 700;
+  font-size: 38px;
+  color: #0a0826;
+}
+.featured-description {
+  font-weight: 700;
+  font-size: 16px;
+  color: #6c6c6c;
+}
+.featured .btn-primary {
+  width: 155px;
+  border-radius: 0;
+}
 /* -------------------------
     Media Query
 ---------------------------- */
