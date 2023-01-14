@@ -61,7 +61,6 @@
 .btn-primary {
   padding: 10px 24px;
   color: white;
-
   border: none;
   background: #e02c6d;
   border-radius: 41px;
@@ -89,6 +88,62 @@
   padding: 35px 0;
 }
 
+/* -------------------------
+    Popular Collection
+---------------------------- */
+.popular {
+  margin: 100px 0;
+}
+.popular-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #3a3a3a;
+}
+.collection-container {
+  width: 330px;
+  margin: 0 200px;
+}
+.product {
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.product img {
+  padding: 15px;
+}
+.product .product-title,
+.product-price,
+.product-ratings,
+.product-description {
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+.product-title {
+  font-weight: 500;
+  font-size: 28px;
+  color: #18191f;
+}
+.product-price {
+  font-weight: 400;
+  font-size: 24px;
+}
+.fa-star.filled {
+  color: #fb8200;
+}
+.fa-star.empty {
+  color: #5e6366;
+}
+.product-ratings-number {
+  font-weight: 700;
+  font-size: 16px;
+  color: #5e6366;
+}
+.product-description {
+  font-weight: 700;
+  font-size: 14px;
+  color: #787885;
+}
 /* -------------------------
     Media Query
 ---------------------------- */
