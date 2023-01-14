@@ -78,6 +78,18 @@
 }
 
 /* -------------------------
+    Company Section
+---------------------------- */
+.company {
+  margin: 0 200px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-top: 1px solid #dee4ec;
+  border-bottom: 1px solid #dee4ec;
+  padding: 35px 0;
+}
+
+/* -------------------------
     Media Query
 ---------------------------- */
 @media only screen and (max-width: 576px) {
@@ -99,5 +111,12 @@
     top: 90px;
     left: 55px;
     width: 260px;
+  }
+  .company {
+    margin: 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    border: none;
   }
 }
