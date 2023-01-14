@@ -183,6 +183,40 @@
 }
 
 /* -------------------------
+    Footer Section
+---------------------------- */
+footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 500px;
+  color: white;
+  background: #0a0826;
+}
+.footer-title {
+  font-weight: 700;
+  font-size: 24px;
+  padding: 3px;
+}
+.footer-description {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 3px;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 15px;
+}
+.footer-icon {
+  background-color: #23213c;
+  width: 26px;
+  border-radius: 12px;
+}
+
+/* -------------------------
     Media Query
 ---------------------------- */
 @media only screen and (max-width: 576px) {
