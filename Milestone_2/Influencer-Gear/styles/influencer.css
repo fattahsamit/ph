@@ -184,4 +184,7 @@
     grid-template-columns: repeat(4, 1fr);
     border: none;
   }
+  .collection-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
