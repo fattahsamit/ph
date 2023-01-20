@@ -1,3 +1,7 @@
 .rating-icon {
   width: 18px;
 }
+.btn-bz-danger {
+  color: white;
+  background-color: rgb(214, 46, 46);
+}
