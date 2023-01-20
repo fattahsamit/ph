@@ -1,5 +1,5 @@
 # Programming Hero Modules
-## Web Development Bootcamp
+Web Development Bootcamp
 
 I've taken this upon myself to stay commited to learn Web development by myself with online resourses and courses.
 
