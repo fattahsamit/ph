@@ -7,6 +7,19 @@
     <title>Penguin Fashion</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Editing the tailwind.config object to customize -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              price: "#FABE4C",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
     <header class="bg-amber-100">
@@ -67,7 +80,7 @@
                 industry.
               </p>
               <div>
-                <h2 class="text-4xl font-semibold text-[#FABE4C]">$235</h2>
+                <h2 class="text-4xl font-semibold text-price">$235</h2>
                 <button
                   class="uppercase py-4 px-8 rounded-lg text-white bg-gradient-to-b from-[#A4BC46] to-[#85A019]"
                 >
