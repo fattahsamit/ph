@@ -24,6 +24,21 @@ nav {
 // nav ul a {
 // }
 
+button {
+  padding: 5px;
+  border: 1px solid red;
+  border-radius: 8%;
+  background-color: rgba(255, 0, 0, 0.379);
+
+  &:hover {
+    background-color: hotpink;
+    padding: 10px;
+  }
+}
+// button:hover {
+//   background-color: red;
+// }
+
 h1 {
   color: $primary-color;
 }
