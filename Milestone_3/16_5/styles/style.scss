@@ -1,3 +1,5 @@
+@use "variables";
+
 // variable
 $primary-color: hotpink;
 $secondary-color: white;
@@ -47,6 +49,7 @@ p {
   background-color: $primary-color;
   margin: 5px;
   padding: 15px;
+  font-size: variables.$medium-font;
 }
 
 ul {
