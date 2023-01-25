@@ -1,5 +1,29 @@
+// variable
 $primary-color: hotpink;
 $secondary-color: white;
+
+// Nesting
+nav {
+  ul {
+    border: 2px solid $primary-color;
+    padding: 15px;
+    li {
+      color: purple;
+      list-style: none;
+      a {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+
+// nav ul {
+// }
+// nav li {
+// }
+// nav ul a {
+// }
+
 h1 {
   color: $primary-color;
 }
@@ -11,7 +35,6 @@ p {
 }
 
 ul {
-  border: 2px solid $primary-color;
 }
 li {
   color: $primary-color;

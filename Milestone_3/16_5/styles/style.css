@@ -1,3 +1,15 @@
+nav ul {
+  border: 2px solid hotpink;
+  padding: 15px;
+}
+nav ul li {
+  color: purple;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: line-through;
+}
+
 h1 {
   color: hotpink;
 }
@@ -7,10 +19,6 @@ p {
   background-color: hotpink;
   margin: 5px;
   padding: 15px;
-}
-
-ul {
-  border: 2px solid hotpink;
 }
 
 li {
