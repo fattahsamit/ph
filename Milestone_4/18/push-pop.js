@@ -14,3 +14,11 @@ numbers.pop();
 var element = numbers.pop();
 console.log(numbers);
 console.log(element);
+
+// shift() to add element to the first index of an array
+friends.shift();
+console.log(friends);
+
+// unshift() to remove the first element of an array
+friends.unshift("Frank");
+console.log(friends);
