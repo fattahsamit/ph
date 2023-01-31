@@ -15,6 +15,17 @@ add(2, 3);
 function sum(a, b, c, d, e) {
   console.log(a, b, c, d, e);
   let sum = a + b + c + d + e;
-  console.log(sum);
+  return sum;
 }
-sum(34, 52, 62, 89, 3);
+let total = sum(34, 52, 62, 89, 3);
+console.log("Total:", total);
+
+function buyFood(money) {
+  let foodPrice = 10;
+  let quantity = money / foodPrice;
+  return quantity;
+}
+// Function Call
+let dollar = 200;
+let amountOfFood = buyFood(dollar);
+console.log("Amount:", amountOfFood);
