@@ -8,9 +8,13 @@ let taka = 200;
 functionName(taka);
 
 function add(num1, num2) {
-  console.log(num1, "+", num2, "=", num1 + num2);
+  const sum = num1 + num2;
+  return sum;
 }
-add(2, 3);
+const total1 = add(2, 3);
+const total2 = add(6, 15);
+const totalFinal = add(total1, total2);
+console.log(totalFinal);
 
 function sum(a, b, c, d, e) {
   console.log(a, b, c, d, e);
@@ -25,7 +29,26 @@ function buyFood(money) {
   let quantity = money / foodPrice;
   return quantity;
 }
-// Function Call
+
 let dollar = 200;
 let amountOfFood = buyFood(dollar);
 console.log("Amount:", amountOfFood);
+
+function avg(a1, a2, a3) {
+  const total = a1 + a2 + a3;
+  const avg = total / 3;
+  return avg;
+}
+
+const a1m = 50,
+  a2m = 40,
+  a3m = 45;
+let getAvg = avg(a1m, a2m, a3m);
+console.log("Average marks:", getAvg);
+
+function square(n) {
+  return n * n;
+}
+let num = 4;
+const makeSquare = square(num);
+console.log("Square of", num, ":", makeSquare);
