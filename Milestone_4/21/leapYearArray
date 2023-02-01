@@ -1,0 +1,13 @@
+function leapYear(year) {
+  let leap = [];
+  for (let i = 0; i < year.length; i++) {
+    if ((year[i] % 4 == 0 && year[i] % 100 != 0) || year[i] % 400 == 0) {
+      leap.push(year[i]);
+    }
+  }
+  return leap;
+}
+
+const years = [1933, 1952, 2000, 1800];
+const leapyears = leapYear(years);
+console.log(leapyears);
