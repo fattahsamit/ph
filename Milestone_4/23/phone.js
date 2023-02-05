@@ -2,49 +2,49 @@ const phones = [
   {
     name: "Samsung",
     camera: 12,
-    storage: "32 GB",
+    storage: "128 GB",
     price: 36000,
     color: "Silver",
   },
   {
-    name: "OnePlus",
+    name: "Realme",
     camera: 5,
     storage: "32 GB",
     price: 22000,
-    color: "Silver",
+    color: "Black",
   },
   {
     name: "iphone",
-    camera: 64,
+    camera: 32,
     storage: "32 GB",
     price: 82000,
-    color: "Silver",
+    color: "White",
   },
   {
     name: "Xiaomi",
     camera: 8,
     storage: "32 GB",
-    price: 52000,
-    color: "Silver",
+    price: 16000,
+    color: "Navy",
   },
   {
     name: "Oppo",
     camera: 32,
     storage: "32 GB",
     price: 20000,
-    color: "Silver",
+    color: "Black",
   },
   {
     name: "Nokia",
-    camera: 16,
+    camera: 32,
     storage: "32 GB",
     price: 44000,
-    color: "Silver",
+    color: "Blue",
   },
   {
-    name: "HTC",
-    camera: 12,
-    storage: "32 GB",
+    name: "Pixel",
+    camera: 64,
+    storage: "128 GB",
     price: 62000,
     color: "Silver",
   },
@@ -61,5 +61,19 @@ function cheapestPhone(phones) {
   return cheapest;
 }
 
+function bestCamera(phones) {
+  let bestcamera = phones[0];
+  for (let i = 0; i < phones.length; i++) {
+    const phone = phones[i];
+    if (phone.camera > bestcamera.camera) {
+      bestcamera = phone;
+    }
+  }
+  return bestcamera;
+}
+
 const mySelection = cheapestPhone(phones);
-console.log(mySelection);
+console.log("Cheapest Phone:", mySelection);
+
+const mySelection2 = bestCamera(phones);
+console.log("Phone with the best camera:", mySelection2);
