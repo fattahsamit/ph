@@ -50,4 +50,13 @@ function largerReverse(name1, name2) {
 const name1 = "Mofiz",
   name2 = "Hasan Masud";
 const reverse = largerReverse(name1, name2);
-console.log(reverse);
+// console.log(reverse);
+
+function milliliterToLiter(ml) {
+  const l = ml / 1000;
+  return l;
+}
+
+const ml = 3500;
+const liter = milliliterToLiter(ml);
+console.log(liter);
