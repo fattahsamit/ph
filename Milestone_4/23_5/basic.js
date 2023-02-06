@@ -34,4 +34,20 @@ function largerThan5(numbers) {
 
 const numbers = [-1, 2, -3, 4, 5, 6, -7, 8, -9, 10];
 const bigger = largerThan5(numbers);
-console.log(bigger);
+// console.log(bigger);
+
+function largerReverse(name1, name2) {
+  let longerName;
+  if (name1.length > name2.length) {
+    longerName = name1;
+  } else {
+    longerName = name2;
+  }
+  const reversedName = longerName.split("").reverse().join("");
+  return reversedName;
+}
+
+const name1 = "Mofiz",
+  name2 = "Hasan Masud";
+const reverse = largerReverse(name1, name2);
+console.log(reverse);
