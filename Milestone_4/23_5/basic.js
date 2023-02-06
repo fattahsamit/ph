@@ -7,7 +7,7 @@ function add(n) {
 }
 
 const sum = add(9);
-// console.log(sum);
+console.log(sum);
 
 function tableOf3(n) {
   let table = [];
@@ -19,7 +19,7 @@ function tableOf3(n) {
 }
 
 const table3 = tableOf3(10);
-// console.log(table3);
+console.log(table3);
 
 function largerThan5(numbers) {
   let count = 0;
@@ -34,7 +34,7 @@ function largerThan5(numbers) {
 
 const numbers = [-1, 2, -3, 4, 5, 6, -7, 8, -9, 10];
 const bigger = largerThan5(numbers);
-// console.log(bigger);
+console.log(bigger);
 
 function largerReverse(name1, name2) {
   let longerName;
@@ -50,7 +50,7 @@ function largerReverse(name1, name2) {
 const name1 = "Mofiz",
   name2 = "Hasan Masud";
 const reverse = largerReverse(name1, name2);
-// console.log(reverse);
+console.log(reverse);
 
 function milliliterToLiter(ml) {
   const l = ml / 1000;
@@ -59,7 +59,7 @@ function milliliterToLiter(ml) {
 
 const ml = 3500;
 const liter = milliliterToLiter(ml);
-// console.log(liter);
+console.log(liter);
 
 function smallestPerson(persons) {
   let smallestAge = persons[0].age;
