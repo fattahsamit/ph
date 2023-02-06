@@ -1,11 +1,11 @@
 function isJavaScriptFile(file) {
-  if (file.includes(".js", 9)) {
+  if (file.endsWith(".js")) {
     return true;
   } else {
     return false;
   }
 }
 
-const fileName = "app.js";
+const fileName = "image.js.png";
 const jsOrNot = isJavaScriptFile(fileName);
 console.log(jsOrNot);
