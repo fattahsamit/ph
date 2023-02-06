@@ -19,4 +19,19 @@ function tableOf3(n) {
 }
 
 const table3 = tableOf3(10);
-console.log(table3);
+// console.log(table3);
+
+function largerThan5(numbers) {
+  let count = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    const number = numbers[i];
+    if (number > 5) {
+      count++;
+    }
+  }
+  return count;
+}
+
+const numbers = [-1, 2, -3, 4, 5, 6, -7, 8, -9, 10];
+const bigger = largerThan5(numbers);
+console.log(bigger);
