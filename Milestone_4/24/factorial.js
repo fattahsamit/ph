@@ -1,3 +1,9 @@
+// let factorial = 1;
+// for (let i = 5; i >= 1; i--) {
+//   factorial = factorial * i;
+// }
+// console.log(factorial);
+
 function fact(n) {
   // Base Case
   if (n == 1) {
