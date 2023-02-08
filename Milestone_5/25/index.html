@@ -22,12 +22,37 @@
         <li>Jack Frost</li>
         <li>Rise of the Guardians</li>
         <li>Dreamworks</li>
+        <li>Animation</li>
+      </ul>
+      <ul>
+        <li>Patrick Bateman</li>
+        <li>American Psycho</li>
+        <li>Lionsgate</li>
       </ul>
     </main>
     <footer></footer>
     <script src="js/dom.js"></script>
     <script>
-      console.log("Adding JS inside the HTML file");
+      //   const student = {
+      //     name: "Sam",
+      //     ID: 11,
+      //     study: function (time) {
+      //       console.log(time, "is studying");
+      //     },
+      //   };
+      //   console.log("Adding JS inside the HTML file");
+
+      const liCollection = document.getElementsByTagName("li");
+      //   console.log(liCollection);
+      for (const li of liCollection) {
+        console.log(li.innerText);
+      }
+
+      const allHeadings = document.getElementsByTagName("h1");
+      //   console.log(allHeadings);
+      for (const h1 of allHeadings) {
+        console.log(h1.innerText);
+      }
     </script>
   </body>
 </html>
