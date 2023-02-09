@@ -10,25 +10,51 @@
       li {
         color: blueviolet;
       }
+      #fruits-title {
+        color: black;
+      }
+      .important-places {
+        color: palevioletred;
+      }
     </style>
   </head>
   <body>
     <header>
       <h1>Welcome to Milestone 5</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi nam,
+        totam libero temporibus deserunt consequatur quod officia est facilis
+        odit, placeat corporis deleniti quae dolore beatae! Omnis enim neque
+        minima.
+      </p>
     </header>
     <main>
-      <h1>DOM Manipulation</h1>
-      <ul>
-        <li>Jack Frost</li>
-        <li>Rise of the Guardians</li>
-        <li>Dreamworks</li>
-        <li>Animation</li>
-      </ul>
-      <ul>
-        <li>Patrick Bateman</li>
-        <li>American Psycho</li>
-        <li>Lionsgate</li>
-      </ul>
+      <section>
+        <h1>DOM Manipulation</h1>
+        <ul>
+          <li>Jack Frost</li>
+          <li>Rise of the Guardians</li>
+          <li>Dreamworks</li>
+          <li>Animation</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="fruits-title">Fruits</h1>
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Mango</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="places-title">Places</h1>
+        <ul>
+          <li class="important-places">Bandarban</li>
+          <li class="important-places">Sundarban</li>
+          <li class="important-places">Rangamati</li>
+          <li class="other-places">Cox's Bazar</li>
+        </ul>
+      </section>
     </main>
     <footer></footer>
     <script src="js/dom.js"></script>
@@ -45,13 +71,20 @@
       const liCollection = document.getElementsByTagName("li");
       //   console.log(liCollection);
       for (const li of liCollection) {
-        console.log(li.innerText);
+        // console.log(li.innerText);
       }
 
       const allHeadings = document.getElementsByTagName("h1");
       //   console.log(allHeadings);
       for (const h1 of allHeadings) {
-        console.log(h1.innerText);
+        // console.log(h1.innerText);
+      }
+      const fruitsTitle = document.getElementById("fruits-title");
+      fruitsTitle.innerText = "Fruits changed by JavaScript";
+
+      const places = document.getElementsByClassName("important-places");
+      for (const place of places) {
+        console.log(place.innerText);
       }
     </script>
   </body>
