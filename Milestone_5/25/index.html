@@ -7,7 +7,7 @@
     <title>DOM</title>
     <link rel="stylesheet" href="styles/style.css" />
     <style>
-      li {
+      .fruits-container li {
         color: blueviolet;
       }
       #fruits-title {
@@ -38,7 +38,7 @@
           <li>Animation</li>
         </ul>
       </section>
-      <section>
+      <section class="fruits-container">
         <h1 id="fruits-title">Fruits</h1>
         <ul>
           <li>Apple</li>
@@ -68,6 +68,7 @@
       //   };
       //   console.log("Adding JS inside the HTML file");
 
+      // getElementsByTagName
       const liCollection = document.getElementsByTagName("li");
       //   console.log(liCollection);
       for (const li of liCollection) {
@@ -79,12 +80,25 @@
       for (const h1 of allHeadings) {
         // console.log(h1.innerText);
       }
+
+      // getElementById
       const fruitsTitle = document.getElementById("fruits-title");
       fruitsTitle.innerText = "Fruits changed by JavaScript";
 
+      // getElementsByClassName
       const places = document.getElementsByClassName("important-places");
       for (const place of places) {
         console.log(place.innerText);
+      }
+
+      // querySelector
+      const firstLi = document.querySelector(".fruits-container li");
+      console.log(firstLi);
+      // querySelectorAll
+      const someLi = document.querySelectorAll(".fruits-container li");
+      // console.log(someLi);
+      for (const li of someLi) {
+        console.log(li.innerText);
       }
     </script>
   </body>
