@@ -17,16 +17,34 @@
         <li class="item">Laudantium, officiis accusamus.</li>
         <li class="item">Cumque, voluptas et?</li>
       </ul>
+      <button id="btn-add-item">Add item</button>
     </section>
     <script>
+      //   const items = document.getElementsByClassName("item");
+      //   for (const item of items) {
+      //     item.addEventListener("click", function (event) {
+      //       //   console.log(item);
+      //       //   console.log(event.target.parentNode);
+      //       event.target.parentNode.removeChild(event.target);
+      //     });
+      //   }
+
       const items = document.getElementsByClassName("item");
       for (const item of items) {
         item.addEventListener("click", function (event) {
-          //   console.log(item);
-          //   console.log(event.target.parentNode);
           event.target.parentNode.removeChild(event.target);
         });
       }
+
+      document
+        .getElementById("btn-add-item")
+        .addEventListener("click", function () {
+          const listContainer = document.getElementById("list-container");
+          const li = document.createElement("li");
+          li.innerText = "Brand New Item added";
+          li.classList.add("item");
+          listContainer.appendChild(li);
+        });
     </script>
   </body>
 </html>
