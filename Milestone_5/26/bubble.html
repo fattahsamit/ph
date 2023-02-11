@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubble</title>
+    <style>
+      #item-2 {
+        border: 3px solid goldenrod;
+      }
+      body {
+        border: 3px solid red;
+      }
+      section {
+        border: 3px solid greenyellow;
+      }
+      ul {
+        border: 3px solid blueviolet;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <h1>Exploring Event Bubble</h1>
+    <section id="list-container">
+      <ul id="list-ul">
+        <li id="item-1">Lorem, ipsum.</li>
+        <li id="item-2">At, commodi?</li>
+        <li id="item-3">Quasi, nemo.</li>
+        <li id="item-4">Doloremque, tempora.</li>
+        <li id="item-5">Maiores, deleniti.</li>
+        <li id="item-6">At, labore!</li>
+      </ul>
+    </section>
+
+    <script>
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("Item 2 clicked");
+          event.stopPropagation();
+        });
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("Item 2 clicked again");
+          event.stopImmediatePropagation();
+        });
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("Item 2 clicked again! are you for real?");
+        });
+      document.getElementById("list-ul").addEventListener("click", function () {
+        console.log("ul clicked");
+      });
+      document
+        .getElementById("list-container")
+        .addEventListener("click", function () {
+          console.log("Section container clicked");
+        });
+      document.getElementById("body").addEventListener("click", function () {
+        console.log("Body of the HTML clicked");
+      });
+    </script>
+  </body>
+</html>
