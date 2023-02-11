@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegate</title>
+  </head>
+  <body>
+    <h1>Explore Event Delegate</h1>
+    <section>
+      <ul id="list-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Ipsa, dolores ab.</li>
+        <li class="item">Quasi, eius id!</li>
+        <li class="item">Iste, eum deserunt.</li>
+        <li class="item">Laudantium, officiis accusamus.</li>
+        <li class="item">Cumque, voluptas et?</li>
+      </ul>
+    </section>
+    <script>
+      const items = document.getElementsByClassName("item");
+      for (const item of items) {
+        item.addEventListener("click", function (event) {
+          //   console.log(item);
+          //   console.log(event.target.parentNode);
+          event.target.parentNode.removeChild(event.target);
+        });
+      }
+    </script>
+  </body>
+</html>
