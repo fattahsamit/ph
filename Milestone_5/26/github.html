@@ -15,7 +15,14 @@
     <h1 id="secret-info">My secret info</h1>
     <input id="delete-confirm" type="text" placeholder="Please type delete" />
     <button id="btn-delete" disabled>Delete</button>
+    <button id="btn-delete-back">Back</button>
+    <br />
+    <br />
+    <input id="hide-confirm" type="text" placeholder="Please type hide" />
+    <button id="btn-hide" disabled>Hide</button>
+    <button id="btn-hidden-back">Back</button>
     <script>
+      // Remove Content button
       document
         .getElementById("delete-confirm")
         .addEventListener("keyup", function (event) {
@@ -32,8 +39,40 @@
         .getElementById("btn-delete")
         .addEventListener("click", function () {
           const secret = document.getElementById("secret-info");
-          //   secret.style.visibility = "hidden";
           secret.style.display = "none";
+        });
+      // Get back removed content
+      document
+        .getElementById("btn-delete-back")
+        .addEventListener("click", function () {
+          const secret = document.getElementById("secret-info");
+          secret.style.display = "block";
+        });
+
+      // Hide Content button
+      document
+        .getElementById("hide-confirm")
+        .addEventListener("keyup", function (event) {
+          const text = event.target.value;
+          const hideButton = document.getElementById("btn-hide");
+          if (text === "hide") {
+            hideButton.removeAttribute("disabled");
+          } else {
+            hideButton.setAttribute("disabled", true);
+          }
+        });
+      document
+        .getElementById("btn-hide")
+        .addEventListener("click", function () {
+          const secret = document.getElementById("secret-info");
+          secret.style.visibility = "hidden";
+        });
+      // Get back hidden content
+      document
+        .getElementById("btn-hidden-back")
+        .addEventListener("click", function () {
+          const secret = document.getElementById("secret-info");
+          secret.style.visibility = "visible";
         });
     </script>
   </body>
