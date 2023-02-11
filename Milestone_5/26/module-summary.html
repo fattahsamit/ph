@@ -9,7 +9,8 @@
   <body>
     <h1>Explore DOM Events</h1>
     <button onclick="makeGreen()">Make Green</button>
-    <button id="make-yellow">Make Yellow</button>
+    <button id="make-yellow">Make Yellow</button><br />
+    <input id="user-email" type="email" />
     <script>
       //   Option 1
       function makeGreen() {
@@ -19,8 +20,15 @@
       //   Option 2
       document
         .getElementById("make-yellow")
-        .addEventListener("click", function () {
+        .addEventListener("dblclick", function () {
           document.body.style.backgroundColor = "lightyellow";
+        });
+
+      // keyup event
+      document
+        .getElementById("user-email")
+        .addEventListener("keyup", function (event) {
+          console.log(event.target.value);
         });
     </script>
   </body>
