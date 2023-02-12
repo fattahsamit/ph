@@ -7,6 +7,7 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   // Validation
   if (newDepositAmountString <= 0 || newDepositAmountString === "") {
     alert("Please enter a valid number");
+    depositField.value = "";
   } else {
     const newDepositAmount = parseFloat(newDepositAmountString);
     //   console.log(typeof newDepositAmount);

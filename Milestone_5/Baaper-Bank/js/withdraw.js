@@ -21,6 +21,7 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
   // Validation
   if (newWithdrawAmountString <= 0 || newWithdrawAmountString === "") {
     alert("Please enter a valid number");
+    withdrawField.value = "";
   } else {
     const newWithdrawAmount = parseFloat(newWithdrawAmountString);
 
