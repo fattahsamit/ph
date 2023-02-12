@@ -14,8 +14,11 @@ document.getElementById("btn-submit").addEventListener("click", function () {
   // DO NOT VERIFY email password on the Client Side!!!
   //   Step 4: Verify email and password and check whether valid user or not
   if (email === "pola@baap.com" && password === "secret") {
-    console.log("Valid User");
+    window.location.href = "bank.html";
+    // window.location = "bank.html";
+    // window.location.assign("bank.html");
+    // window.location.replace("bank.html");
   } else {
-    console.log("Invalid User");
+    alert("Invalid User/Password");
   }
 });
