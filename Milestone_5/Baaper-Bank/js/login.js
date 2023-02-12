@@ -19,6 +19,10 @@ document.getElementById("btn-submit").addEventListener("click", function () {
     // window.location.assign("bank.html");
     // window.location.replace("bank.html");
   } else {
-    alert("Invalid User/Password");
+    alert("Invalid Credentials");
   }
 });
+
+function remember() {
+  alert("E-mail = pola@baap.com\nPassword = secret");
+}
