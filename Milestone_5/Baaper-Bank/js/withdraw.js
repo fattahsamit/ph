@@ -23,7 +23,7 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
   // Step-7
   withdrawField.value = "";
   // Validation
-  if (newWithdrawAmount <= 0 || newWithdrawAmountString === "") {
+  if (newWithdrawAmount <= 0 || isNaN(newWithdrawAmount)) {
     alert("Please enter a valid number");
     return;
   }

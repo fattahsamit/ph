@@ -10,7 +10,7 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   //   Step 7: Clear the deposit field
   depositField.value = "";
   // Validation
-  if (newDepositAmount <= 0 || newDepositAmountString === "") {
+  if (newDepositAmount <= 0 || isNaN(newDepositAmount)) {
     alert("Please enter a valid number");
     return;
   }
