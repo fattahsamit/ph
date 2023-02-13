@@ -1,3 +1,4 @@
+// DRY (Do not Repeat Yourself)
 /*
     1. Add withdraw button event handler
     2. Get withdraw amount by using getInputFieldValueById function
