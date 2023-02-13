@@ -12,3 +12,8 @@ function getPreviousTotal(input) {
   const amountNumber = parseFloat(amountString);
   return amountNumber;
 }
+
+function setNewTotal(id, newAmount) {
+  const amount = document.getElementById(id);
+  amount.innerText = newAmount;
+}

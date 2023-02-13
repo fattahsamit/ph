@@ -4,5 +4,7 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   const previousBalanceTotal = getPreviousTotal("balance-total");
 
   const newDepositTotal = previousDepositTotal + newDepositAmount;
+  setNewTotal("deposit-total", newDepositTotal);
   const newBalanceTotal = previousBalanceTotal + newDepositAmount;
+  setNewTotal("balance-total", newBalanceTotal);
 });
