@@ -3,6 +3,10 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   const previousDepositTotal = getPreviousTotal("deposit-total");
   const previousBalanceTotal = getPreviousTotal("balance-total");
 
+  if (numberValidation(newDepositAmount)) {
+    return;
+  }
+
   const newDepositTotal = previousDepositTotal + newDepositAmount;
   setNewTotal("deposit-total", newDepositTotal);
   const newBalanceTotal = previousBalanceTotal + newDepositAmount;

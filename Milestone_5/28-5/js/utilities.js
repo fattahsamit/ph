@@ -17,3 +17,17 @@ function setNewTotal(id, newAmount) {
   const amount = document.getElementById(id);
   amount.innerText = newAmount;
 }
+
+function numberValidation(amount) {
+  if (amount <= 0 || isNaN(amount)) {
+    alert("Please enter a valid number");
+    return true;
+  }
+}
+
+function withdrawValidation(amount, fund) {
+  if (amount > fund) {
+    alert("Insufficient Funds\nCurrent Balance: " + fund + "$");
+    return true;
+  }
+}
