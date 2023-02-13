@@ -6,6 +6,11 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   */
   const newDepositAmount = getInputFieldValueById("deposit-field");
 
+  // // Validation
+  if (inputValidation(newDepositAmount)) {
+    return;
+  }
+
   //   Get previous deposit total by ID
   const previousDepositTotal = getTextElementValueById("deposit-total");
 

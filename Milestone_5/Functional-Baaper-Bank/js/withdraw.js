@@ -14,6 +14,12 @@
 document.getElementById("btn-withdraw").addEventListener("click", function () {
   // 2
   const newWithdrawAmount = getInputFieldValueById("withdraw-field");
+
+  // // Validation
+  if (inputValidation(newWithdrawAmount)) {
+    return;
+  }
+
   // 3
   const previousWithdrawTotal = getTextElementValueById("withdraw-total");
   // 4

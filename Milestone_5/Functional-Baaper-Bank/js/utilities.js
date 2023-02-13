@@ -17,3 +17,11 @@ function setTextElementValueById(elementId, newValue) {
   const textElement = document.getElementById(elementId);
   textElement.innerText = newValue;
 }
+
+// Validation
+function inputValidation(amount) {
+  if (amount <= 0 || isNaN(amount)) {
+    alert("Please enter a valid number");
+    return true;
+  }
+}
