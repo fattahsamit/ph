@@ -25,3 +25,13 @@ function inputValidation(amount) {
     return true;
   }
 }
+
+// Amount Validation
+function amountValidation(amount, fund) {
+  if (amount > fund) {
+    alert(
+      "You cannot withdraw this amount of money.\n" + "Current Balance: " + fund
+    );
+    return true;
+  }
+}

@@ -22,11 +22,17 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
 
   // 3
   const previousWithdrawTotal = getTextElementValueById("withdraw-total");
+  // 5
+  const previousBalanceTotal = getTextElementValueById("balance-total");
+
+  // Amount Validation
+  if (amountValidation(newWithdrawAmount, previousBalanceTotal)) {
+    return;
+  }
+
   // 4
   const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
   setTextElementValueById("withdraw-total", newWithdrawTotal);
-  // 5
-  const previousBalanceTotal = getTextElementValueById("balance-total");
   // 6
   const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
   setTextElementValueById("balance-total", newBalanceTotal);
