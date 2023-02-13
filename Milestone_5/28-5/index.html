@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-900"
+  >
+    <header class="text-center my-8 text-white">
+      <h1 class="text-5xl font-semibold drop-shadow-lg">
+        My <span class="text-emerald-400">Account</span>
+      </h1>
+    </header>
+    <main class="my-12">
+      <section class="text-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-9/12 mx-auto">
+          <div class="bg-emerald-600 text-white p-8 rounded-3xl drop-shadow-lg">
+            <h4 class="text-3xl font-semibold mb-2">Deposit</h4>
+            <h4 class="text-4xl font-bold">$<span>00</span></h4>
+          </div>
+          <div class="bg-rose-600 text-white p-8 rounded-3xl drop-shadow-lg">
+            <h4 class="text-3xl font-semibold mb-2">Withdraw</h4>
+            <h4 class="text-4xl font-bold">$<span>00</span></h4>
+          </div>
+          <div class="bg-sky-600 text-white p-8 rounded-3xl drop-shadow-lg">
+            <h4 class="text-3xl font-semibold mb-2">Balance</h4>
+            <h4 class="text-4xl font-bold">$<span>1240</span></h4>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
+  </body>
+</html>
