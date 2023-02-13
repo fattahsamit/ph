@@ -19,19 +19,35 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
   //   Step 3
   withdrawField.value = "";
 
+  // Validation
+  if (newWithdrawAmount <= 0 || isNaN(newWithdrawAmount)) {
+    alert("Please enter a valid number");
+    return;
+  }
+
   //   Step 4
   const withdrawTotalElement = document.getElementById("withdraw-total");
   const previousWithdrawTotalString = withdrawTotalElement.innerText;
   const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
 
-  //   Step 5
-  const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
-  withdrawTotalElement.innerText = newWithdrawTotal;
-
   //   Step 6
   const balanceTotalElement = document.getElementById("balance-total");
   const previousBalanceTotalString = balanceTotalElement.innerText;
   const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+
+  // Validation
+  if (newWithdrawAmount > previousBalanceTotal) {
+    alert(
+      "You cannot withdraw this amount of money.\n" +
+        "Current Balance: " +
+        previousBalanceTotal
+    );
+    return;
+  }
+
+  //   Step 5
+  const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
+  withdrawTotalElement.innerText = newWithdrawTotal;
 
   //   Step 7
   const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;

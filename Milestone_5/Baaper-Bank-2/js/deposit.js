@@ -19,6 +19,12 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   //   Step 3
   depositField.value = "";
 
+  // Validation
+  if (newDepositAmount <= 0 || isNaN(newDepositAmount)) {
+    alert("Please enter a valid number");
+    return;
+  }
+
   //   Step 4
   const depositTotalElement = document.getElementById("deposit-total");
   const previousDepositTotalString = depositTotalElement.innerText;
