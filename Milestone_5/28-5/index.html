@@ -21,15 +21,21 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-9/12 mx-auto">
           <div class="bg-emerald-600 text-white p-8 rounded-3xl drop-shadow-lg">
             <h4 class="text-3xl font-semibold mb-2">Deposit</h4>
-            <h4 class="text-4xl font-bold">$<span>00</span></h4>
+            <h4 class="text-4xl font-bold">
+              $<span id="deposit-total">00</span>
+            </h4>
           </div>
           <div class="bg-rose-600 text-white p-8 rounded-3xl drop-shadow-lg">
             <h4 class="text-3xl font-semibold mb-2">Withdraw</h4>
-            <h4 class="text-4xl font-bold">$<span>00</span></h4>
+            <h4 class="text-4xl font-bold">
+              $<span id="withdraw-total">00</span>
+            </h4>
           </div>
           <div class="bg-sky-600 text-white p-8 rounded-3xl drop-shadow-lg">
             <h4 class="text-3xl font-semibold mb-2">Balance</h4>
-            <h4 class="text-4xl font-bold">$<span>1240</span></h4>
+            <h4 class="text-4xl font-bold">
+              $<span id="balance-total">1240</span>
+            </h4>
           </div>
         </div>
       </section>
@@ -42,11 +48,13 @@
           <div class="bg-green-600 p-8 rounded-3xl drop-shadow-lg">
             <h4 class="text-3xl font-semibold mb-2">Deposit Amount</h4>
             <input
+              id="deposit-field"
               class="w-9/12 py-2 px-3 mb-2 rounded block text-black"
               type="text"
               placeholder="Enter deposit amount"
             />
             <button
+              id="btn-deposit"
               class="bg-green-700 hover:bg-green-900 p-2 font-medium rounded drop-shadow"
             >
               Deposit
@@ -56,11 +64,13 @@
           <div class="bg-red-600 p-8 rounded-3xl drop-shadow-lg">
             <h4 class="text-3xl font-semibold mb-2">Withdraw Amount</h4>
             <input
+              id="withdraw-field"
               class="w-9/12 py-2 px-3 mb-2 rounded block text-black"
               type="text"
               placeholder="Enter withdraw amount"
             />
             <button
+              id="btn-withdraw"
               class="bg-red-700 hover:bg-red-900 p-2 font-medium rounded drop-shadow"
             >
               Withdraw
