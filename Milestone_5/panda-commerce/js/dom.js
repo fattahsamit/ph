@@ -12,3 +12,7 @@ const cardElements = document.getElementsByClassName("card");
 for (const cardElement of cardElements) {
   cardElement.style.borderRadius = "30px";
 }
+
+function message() {
+  console.log("This is a Red bag");
+}
