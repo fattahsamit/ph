@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body
-    class="text-center w-6/12 mx-auto gradient bg-gradient-to-r from-cyan-500 to-blue-500"
+    class="text-center w-6/12 mx-auto gradient bg-gradient-to-r from-cyan-500 to-blue-600"
   >
     <header class="text-5xl my-12 font-thin">
       <h1 class="drop-shadow-2xl">
@@ -21,33 +21,37 @@
       <section class="my-10 w-9/12 mx-auto">
         <div class="text-slate-900 text-2xl font-normal">
           <h3
-            class="mb-2 w-9/12 mx-auto bg-gradient-to-b from-transparent to-blue-600 p-4 rounded-lg drop-shadow-xl"
+            class="mb-2 w-9/12 mx-auto bg-gradient-to-b from-blue-500 via-cyan-500 to-blue-500 p-4 rounded-lg drop-shadow-xl"
           >
-            Price: <span>1000</span>
+            Price: <span id="price">1000</span>
           </h3>
           <div
-            class="mb-3 w-9/12 mx-auto bg-gradient-to-b from-transparent to-blue-600 p-4 rounded-lg drop-shadow-2xl"
+            class="mb-2 w-9/12 mx-auto bg-gradient-to-b from-blue-500 via-cyan-500 to-blue-500 p-4 rounded-lg drop-shadow-2xl"
           >
-            <h4 class="mb-2">Coupon:</h4>
+            <h4 class="mb-3">Coupon:</h4>
             <input
-              class="inline rounded-md w-3/4 py-1 px-2 text-black"
+              id="coupon-input"
+              class="rounded-md w-3/4 px-2 text-black bg-transparent placeholder-inherit outline outline-slate-900"
               type="text"
               placeholder="DISC30"
             />
           </div>
 
           <button
-            class="mb-2 w-6/12 mx-auto bg-gradient-to-b from-transparent to-blue-600 p-2 rounded-lg drop-shadow-2xl"
+            id="btn-apply"
+            class="mb-2 w-6/12 mx-auto bg-gradient-to-b from-blue-500 via-cyan-500 to-blue-500 hover:bg-gradient-to-br hover:from-blue-500 hover:via-cyan-500 hover:to-blue-500 p-2 rounded-lg drop-shadow-2xl"
           >
             Apply
           </button>
           <h3
-            class="w-9/12 mx-auto bg-gradient-to-b from-transparent to-blue-600 p-4 rounded-lg drop-shadow-2xl"
+            class="w-9/12 mx-auto bg-gradient-to-b from-blue-500 via-cyan-500 to-blue-500 p-4 rounded-lg drop-shadow-2xl"
           >
-            Please pay: <span>700</span>
+            Please pay: <span id="payment">1000</span>
           </h3>
         </div>
       </section>
     </main>
+
+    <script src="js/calculator.js"></script>
   </body>
 </html>
