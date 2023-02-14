@@ -1,17 +1,20 @@
-console.log("hello");
-
-function coupon30Confirmation(coupon) {
-  document.getElementById(coupon).addEventListener("keyup", function (event) {
+document
+  .getElementById("coupon-input")
+  .addEventListener("keyup", function (event) {
     const line = event.target.value;
-    if (line === "DISC30") {
-      return true;
-    } else {
-      return false;
-    }
-  });
-}
 
-document.getElementById("btn-apply").addEventListener("click", function () {
-  if (coupon30Confirmation("coupon-input")) {
-  }
-});
+    document.getElementById("btn-apply").addEventListener("click", function () {
+      if (line === "DISC30") {
+        console.log("DISCO");
+        event.target.value = "";
+
+        const mainPrice = document.getElementById("price");
+        const priceString = mainPrice.innerText;
+        const price = parseFloat(priceString);
+
+        const discountPayment = price * 0.3;
+        const mainPayment = document.getElementById("payment");
+        mainPayment.innerText = price - discountPayment;
+      }
+    });
+  });
