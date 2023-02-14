@@ -16,3 +16,11 @@ for (const cardElement of cardElements) {
 function message() {
   console.log("This is a Red bag");
 }
+
+const buyNowElements = document.getElementsByClassName("buy-now-button");
+// const cardElements = document.getElementsByClassName("card");
+for (let i = 0; i < buyNowElements.length; i++) {
+  buyNowElements[i].addEventListener("click", function () {
+    cardElements[i - 3].style.display = "none";
+  });
+}
