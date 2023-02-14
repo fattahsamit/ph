@@ -24,3 +24,15 @@ for (let i = 0; i < buyNowElements.length; i++) {
     cardElements[i - 3].style.display = "none";
   });
 }
+
+document
+  .getElementById("input-field")
+  .addEventListener("keyup", function (event) {
+    const emailValue = event.target.value;
+    const submitButton = document.getElementById("btn-submit");
+    if (emailValue === "email") {
+      submitButton.removeAttribute("disabled");
+    } else {
+      submitButton.setAttribute("disabled", true);
+    }
+  });
