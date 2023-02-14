@@ -4,3 +4,5 @@ const headerElements = document.getElementsByTagName("h3");
 for (const headerElement of headerElements) {
   headerElement.style.color = "lightblue";
 }
+
+document.getElementById("backpack").style.backgroundColor = "tomato";
