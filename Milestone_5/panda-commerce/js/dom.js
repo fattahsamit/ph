@@ -6,3 +6,9 @@ for (const headerElement of headerElements) {
 }
 
 document.getElementById("backpack").style.backgroundColor = "tomato";
+
+// const cardElements = document.querySelectorAll(".card");
+const cardElements = document.getElementsByClassName("card");
+for (const cardElement of cardElements) {
+  cardElement.style.borderRadius = "30px";
+}
