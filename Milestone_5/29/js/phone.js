@@ -4,6 +4,7 @@ document
     const newPhoneNumber = updatePhoneNumber(true);
 
     updatePhoneTotalPrice(newPhoneNumber);
+    calculateSubTotal();
   });
 
 document
@@ -12,4 +13,5 @@ document
     const newPhoneNumber = updatePhoneNumber(false);
 
     updatePhoneTotalPrice(newPhoneNumber);
+    calculateSubTotal();
   });
