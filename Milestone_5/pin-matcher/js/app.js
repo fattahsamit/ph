@@ -16,5 +16,8 @@ function generatePin() {
 
 document.getElementById("generate-pin").addEventListener("click", function () {
   const pin = getPin();
-  console.log(pin);
+
+  //  Display Pin
+  const displayPinField = document.getElementById("display-pin");
+  displayPinField.value = pin;
 });
