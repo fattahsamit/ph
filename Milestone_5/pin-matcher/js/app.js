@@ -1,1 +1,15 @@
-console.log("app");
+function getPin() {
+  const pin = generatePin();
+  const pinString = pin + "";
+  if (pinString.length === 4) {
+    return pin;
+  } else {
+    // console.log("pin not 4 digit found", pin);
+    return getPin();
+  }
+}
+
+function generatePin() {
+  const random = Math.round(Math.random() * 10000);
+  return random;
+}
