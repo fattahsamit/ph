@@ -1,3 +1,4 @@
+// async await
 const loadQuote = async () => {
   try {
     const res = await fetch("https://api.kanye.rest/");
@@ -6,6 +7,14 @@ const loadQuote = async () => {
   } catch (error) {
     console.log(error);
   }
+};
+
+// Fetch API
+const loadQuote2 = () => {
+  fetch("https://api.kanye.rest/")
+    .then((res) => res.json())
+    .then((data) => displayQuote(data))
+    .catch((error) => console.log(error));
 };
 
 const displayQuote = (quote) => {
