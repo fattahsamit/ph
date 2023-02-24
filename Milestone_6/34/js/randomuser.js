@@ -14,6 +14,10 @@ const displayUser = (user) => {
 
   const countryTag = document.getElementById("country");
   countryTag.innerText = user.results[0].location.country;
+
+  console.log(user.results[0]);
+  const picTag = document.getElementById("pic");
+  picTag.src = user.results[0].picture.medium;
 };
 
 loadUser();
