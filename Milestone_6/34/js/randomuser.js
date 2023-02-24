@@ -17,7 +17,8 @@ const displayUser = (user) => {
 
   console.log(user.results[0]);
   const picTag = document.getElementById("pic");
-  picTag.src = user.results[0].picture.medium;
+  picTag.src = user.results[0].picture.large;
+  picTag.style.borderRadius = "100px";
 };
 
 loadUser();
