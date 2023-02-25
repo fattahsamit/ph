@@ -8,6 +8,7 @@ const searchAllData = () => {
 };
 
 const showPlayerData = (players) => {
+  document.getElementById("search-value").value = "";
   const container = document.getElementById("player-info");
   container.innerHTML = "";
   players.forEach((player) => {
@@ -24,8 +25,8 @@ const showPlayerData = (players) => {
             <h5 class="card-title">${strPlayer}</h5>
             <p class="card-text">Nationality: ${strNationality}</p>
             <div>
-            <button type="button" class="btn btn-danger">Info</button>
-                <button type="button" class="btn btn-primary">Warning</button>
+            <button type="button" class="btn btn-primary">Details</button>
+            <button type="button" class="btn btn-danger">Delete</button>
             </div>
         </div>
     </div>
