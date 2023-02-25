@@ -10,7 +10,18 @@ const loadMeme = () => {
 };
 
 const showMeme = (memes) => {
-  console.log(memes);
+  const memeContainer = document.getElementById("section");
+  memes.slice(0, 6).forEach((meme) => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+    <div class="card w-full glass shadow-2xl">
+      <figure>
+        <img class="w-full h-64" src="${meme.url}" alt="car!"/>
+      </figure>
+    </div>
+    `;
+    memeContainer.appendChild(div);
+  });
 };
 
 loadMeme();
