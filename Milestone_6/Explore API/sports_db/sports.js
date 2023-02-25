@@ -1,5 +1,8 @@
 const searchAllData = () => {
   const inputElement = document.getElementById("search-value");
+  document.getElementById("single-player-details").innerHTML = "";
+  document.getElementById("male").classList.add("d-none");
+  document.getElementById("female").classList.add("d-none");
   const inputValue = inputElement.value;
   const URL = `https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${inputValue}`;
   fetch(URL)
@@ -47,14 +50,27 @@ const singlePlayer = (id) => {
 };
 
 const showSinglePlayer = (data) => {
-  const { strThumb, strPlayer, strDescriptionEN } = data;
+  const { strThumb, strPlayer, strDescriptionEN, strGender } = data;
+
   const container = document.getElementById("single-player-details");
+  container.innerHTML = "";
+  document.getElementById("male").classList.add("d-none");
+  document.getElementById("female").classList.add("d-none");
   const div = document.createElement("div");
+
+  if (strGender === "Male") {
+    document.getElementById("male").classList.remove("d-none");
+  } else {
+    document.getElementById("female").classList.remove("d-none");
+  }
+
   div.innerHTML = `
     <div class="card mb-3" w-100 h-100;">
         <div class="row g-0">
             <div class="col-md-4">
-                <img src="${strThumb}" class="img-fluid rounded-start" alt="...">
+                <img src="${
+                  strThumb ? strThumb : "https://picsum.photos/500/300?random=3"
+                }" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
