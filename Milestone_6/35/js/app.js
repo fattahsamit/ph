@@ -11,6 +11,16 @@ const displayPhones = (phones) => {
   phoneContainer.textContent = "";
   // Display 6 phones only
   phones = phones.slice(0, 6);
+
+  // Display no phones found
+  const noPhone = document.getElementById("no-found-message");
+  if (phones.length === 0) {
+    noPhone.classList.remove("d-none");
+  } else {
+    noPhone.classList.add("d-none");
+  }
+
+  // Display all phones
   phones.forEach((phone) => {
     console.log(phone);
     const { phone_name, image } = phone;
