@@ -8,6 +8,7 @@ const loadPhones = async (searchText) => {
 const displayPhones = (phones) => {
   console.log(phones);
   const phoneContainer = document.getElementById("phone-container");
+  phoneContainer.textContent = "";
 
   phones.forEach((phone) => {
     console.log(phone);
@@ -15,7 +16,7 @@ const displayPhones = (phones) => {
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
-      <div class="card">
+      <div class="card p-4">
           <img src="${image}" class="card-img-top" alt="..." />
           <div class="card-body">
               <h5 class="card-title">${phone_name}</h5>
@@ -29,4 +30,8 @@ const displayPhones = (phones) => {
   });
 };
 
-loadPhones("iphone");
+document.getElementById("btn-search").addEventListener("click", () => {
+  const searchField = document.getElementById("search-field");
+  const searchText = searchField.value;
+  loadPhones(searchText);
+});
