@@ -9,7 +9,8 @@ const displayPhones = (phones) => {
   console.log(phones);
   const phoneContainer = document.getElementById("phone-container");
   phoneContainer.textContent = "";
-
+  // Display 6 phones only
+  phones = phones.slice(0, 6);
   phones.forEach((phone) => {
     console.log(phone);
     const { phone_name, image } = phone;
@@ -34,4 +35,5 @@ document.getElementById("btn-search").addEventListener("click", () => {
   const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
   loadPhones(searchText);
+  searchField.value = "";
 });
