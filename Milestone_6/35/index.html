@@ -35,7 +35,7 @@
       </section>
 
       <!-- Display Search Results -->
-      <section>
+      <section class="my-5">
         <div
           id="phone-container"
           class="row row-cols-1 row-cols-md-3 g-4"
@@ -45,11 +45,14 @@
           <h5 class="text-warning">No phone found. Please try again</h5>
         </div>
 
-        <!-- Spinner -->
-        <div
-          id="loader"
-          class="d-flex justify-content-center my-5 w-25 mx-auto d-none"
-        >
+        <div id="show-all" class="text-center d-none">
+          <div id="btn-show-all" class="btn btn-primary">Show All</div>
+        </div>
+      </section>
+
+      <!-- Spinner -->
+      <section id="loader" class="d-none">
+        <div class="d-flex justify-content-center my-5 w-25 mx-auto">
           <div class="spinner-border text-primary" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
