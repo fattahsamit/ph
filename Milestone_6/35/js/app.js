@@ -6,7 +6,7 @@ const loadPhones = async (searchText, dataLimit) => {
 };
 
 const displayPhones = (phones, dataLimit) => {
-  console.log(phones);
+  // console.log(phones);
   const phoneContainer = document.getElementById("phone-container");
   phoneContainer.textContent = "";
   // Display 10 phones only
@@ -28,7 +28,7 @@ const displayPhones = (phones, dataLimit) => {
 
   // Display all phones
   phones.forEach((phone) => {
-    console.log(phone);
+    // console.log(phone);
     const { phone_name, image } = phone;
     const div = document.createElement("div");
     div.classList.add("col");
@@ -40,6 +40,7 @@ const displayPhones = (phones, dataLimit) => {
               <p class="card-text">
                   This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
               </p>
+              <button onclick="loadPhoneDetails('${phone.slug}')" href="#" class="btn btn-primary">Details</button>
           </div>
       </div>
     `;
@@ -62,6 +63,15 @@ document.getElementById("btn-search").addEventListener("click", () => {
   // searchField.value = "";
 });
 
+// search input field enter key handler
+document
+  .getElementById("search-field")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      processSearch(10);
+    }
+  });
+
 const toggleSpinner = (isLoading) => {
   const loaderSection = document.getElementById("loader");
   if (isLoading) {
@@ -75,3 +85,10 @@ const toggleSpinner = (isLoading) => {
 document.getElementById("btn-show-all").addEventListener("click", function () {
   processSearch();
 });
+
+const loadPhoneDetails = async (id) => {
+  const URL = `https://openapi.programming-hero.com/api/phone/${id}`;
+  const res = await fetch(URL);
+  const data = await res.json();
+  console.log(data);
+};
