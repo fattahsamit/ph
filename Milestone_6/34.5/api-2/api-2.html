@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="emerald">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,13 +13,52 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header></header>
+    <header class="my-10">
+      <h2 class="text-center text-5xl font-medium">
+        <span class="text-blue-600">Car</span> Dealership
+      </h2>
+    </header>
 
-    <main>
-      <h2 class="text-">hafaef</h2>
+    <main class="w-9/12 mx-auto">
+      <section
+        class="flex flex-col md:flex-row gap-5 justify-center items-center"
+      >
+        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img src="https://picsum.photos/400/200" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Car Name: Honda Sedan</h2>
+            <p class="mb-3">
+              Car Detail: Vehicle Type: Sedan, Doors: 2, Seats: 2, Luggage: 2
+              Suitcases / 2 Bags, Transmission: Automatic
+            </p>
+            <div class="card-actions justify-start">
+              <button class="btn btn-secondary">Car Price: 132</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img src="https://picsum.photos/400/200" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Car Name: Honda Sedan</h2>
+            <p class="mb-3">
+              Car Detail: Vehicle Type: Sedan, Doors: 2, Seats: 2, Luggage: 2
+              Suitcases / 2 Bags, Transmission: Automatic
+            </p>
+            <div class="card-actions justify-start">
+              <button class="btn btn-secondary">Car Price: 132</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
     <script src="api-2.js"></script>
+    <script src="app2.js"></script>
   </body>
 </html>
