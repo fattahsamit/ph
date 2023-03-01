@@ -18,13 +18,16 @@
     </header>
 
     <main class="my-8 w-4/5 mx-auto">
-      <section class="mb-10">
-        <h3 class="text-green-700 text-center text-3xl font-semibold">
-          Found 2 persons
-        </h3>
-      </section>
+      <!-- Found Section -->
+      <section
+        id="found"
+        class="mb-10 text-center text-green-700 font-semibold"
+      ></section>
 
-      <section class="flex gap-8 justify-center">
+      <!-- Cards Section -->
+      <section
+        class="flex flex-col md:flex-row gap-8 justify-center items-center"
+      >
         <div
           class="card card-compact w-96 bg-base-100 shadow-xl border rounded-md"
         >
@@ -49,5 +52,6 @@
 
     <footer></footer>
     <script src="api-1.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
