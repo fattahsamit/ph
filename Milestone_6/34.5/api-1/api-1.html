@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="bumblebee">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API 1</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="my-8">
+      <h2 class="text-4xl font-bold text-center">API-1</h2>
+    </header>
+
+    <main class="my-8 w-4/5 mx-auto">
+      <section class="mb-10">
+        <h3 class="text-green-700 text-center text-3xl font-semibold">
+          Found 2 persons
+        </h3>
+      </section>
+
+      <section class="flex gap-8 justify-center">
+        <div
+          class="card card-compact w-96 bg-base-100 shadow-xl border rounded-md"
+        >
+          <h2 class="px-3 py-2 bg-zinc-100 border">Person Name: John</h2>
+          <div class="card-body">
+            <p>age: 32</p>
+            <p>Street: 13/A St Joseph</p>
+          </div>
+        </div>
+
+        <div
+          class="card card-compact w-96 bg-base-100 shadow-xl border rounded-md"
+        >
+          <h2 class="px-3 py-2 bg-zinc-100 border">Person Name: john</h2>
+          <div class="card-body">
+            <p>age: 32</p>
+            <p>street: 13/A St Joseph</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="api-1.js"></script>
+  </body>
+</html>
