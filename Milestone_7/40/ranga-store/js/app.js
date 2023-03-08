@@ -60,7 +60,7 @@ const showProductDetails = (product_id) => {
 const showProductDetailsInModal = (product_details) => {
   console.log(product_details);
   setInnerText("exampleModalLabel", product_details.title);
-  setInnerText("product_id", product_details.id);
+  setInnerText("productId", product_details.id);
   setInnerText("modal_body", product_details.description);
   setInnerText("rating", product_details.rating.rate);
 };
@@ -81,23 +81,21 @@ const updatePrice = (id, value) => {
 
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = Math.round(value);
+  document.getElementById(id).innerText = value;
 };
 
 // update delivery charge and total Tax
 const updateTaxAndCharge = () => {
   const priceConverted = getInputValue("price");
-  if (priceConverted > 200) {
-    setInnerText("delivery-charge", 30);
-    setInnerText("total-tax", priceConverted * 0.2);
-  }
-  if (priceConverted > 400) {
-    setInnerText("delivery-charge", 50);
-    setInnerText("total-tax", priceConverted * 0.3);
-  }
   if (priceConverted > 500) {
     setInnerText("delivery-charge", 60);
     setInnerText("total-tax", priceConverted * 0.4);
+  } else if (priceConverted > 400) {
+    setInnerText("delivery-charge", 50);
+    setInnerText("total-tax", priceConverted * 0.3);
+  } else if (priceConverted > 200) {
+    setInnerText("delivery-charge", 30);
+    setInnerText("total-tax", priceConverted * 0.2);
   }
 };
 
@@ -113,8 +111,8 @@ const updateTotal = () => {
 // search by category
 document.getElementById("search-btn").addEventListener("click", function () {
   const inputField = document.getElementById("input-value").value;
-  const searchedProduct = arr[0].find((p) =>
-    p.category.startsWith(`${inputField}`)
+  const searchedProduct = arr[0].filter((p) =>
+    p.title.includes(`${inputField}`)
   );
   showProducts(searchedProduct);
 });
