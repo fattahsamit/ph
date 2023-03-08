@@ -1,5 +1,5 @@
 console.log("Hello");
-const addInput = document.getElementById(add - field);
+const addInput = document.getElementById("add-field");
 
 const colorInput = document.getElementById("color-field");
 const itemList = document.getElementById("item-list");
@@ -13,7 +13,7 @@ function addItem() {
   const li = document.createElement("li");
   li.innerHTML = addInput.value;
   li.style.color = lastPickedColor;
-  colorChange();
+  changeColor();
   itemList.appendChild("li");
 
   addInput.value = "";
@@ -21,8 +21,8 @@ function addItem() {
 
 // remove item
 function removeItem() {
-  itemList.removeChild(li);
   let li = document.querySelector("li:last-child");
+  itemList.removeChild(li);
 }
 
 // change color
