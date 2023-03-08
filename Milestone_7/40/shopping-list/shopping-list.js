@@ -1,4 +1,3 @@
-console.log("Hello");
 const addInput = document.getElementById("add-field");
 
 const colorInput = document.getElementById("color-field");
