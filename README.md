@@ -8,8 +8,7 @@ https://web.programming-hero.com/
 
 ## Technology
 
-![Tools](https://skillicons.dev/icons?i=html,css,js)
-![Tools](https://skillicons.dev/icons?i=bootstrap,tailwind,react,vite)
+![Tools](https://skillicons.dev/icons?i=html,css,js,bootstrap,tailwind,react,vite)
 
 ## License
 
