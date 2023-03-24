@@ -15,32 +15,33 @@ const singerStyle = {
 function App() {
   return (
     <div className="App">
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
-      <h2>New Component</h2>
-      <Friend></Friend>
-      <Friend></Friend>
-      <Friend></Friend>
+      <Person name="Fattah Samit" job="Software Engineer"></Person>
+      <Person name="Sakib Al Hasan" job="Businessman"></Person>
+      <Person name="Chris Evans" job="Actor"></Person>
+      <h2 id="justAnotherComponent">New Component</h2>
+      <Friend name="Jason Mamoa" role="Aquaman"></Friend>
+      <Friend name="Jhonny Depp" role="Jack Sparrow"></Friend>
+      <Friend name="Hugh Jackman" role="Wolverine"></Friend>
     </div>
   );
 }
 
-function Person() {
+function Person(props) {
+  // console.log(props);
   return (
     <div className="person">
-      <h1>Fattah Samit</h1>
-      <p>Software Engineer</p>
+      <h1>{props.name}</h1>
+      <p>{props.job}</p>
     </div>
   );
 }
 
-function Friend() {
+function Friend(props) {
+  console.log(props);
   return (
     <div className="container">
-      <h1>Jason Mamoa</h1>
-      <p>Aquaman</p>
+      <h1>Name: {props.name}</h1>
+      <p>Role: {props.role}</p>
     </div>
   );
 }
