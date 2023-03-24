@@ -23,7 +23,22 @@ function LoadCountries() {
   return (
     <div>
       <h1>World Tour</h1>
-      <h3>Available Countries: {countries.length}</h3>
+      <h2>Available Countries: {countries.length}</h2>
+      {countries.map((country) => (
+        <Country
+          name={country.name.common}
+          population={country.population}
+        ></Country>
+      ))}
+    </div>
+  );
+}
+
+function Country({ name, population }) {
+  return (
+    <div>
+      <h3>Name: {name}</h3>
+      <h4>Population: {population}</h4>
     </div>
   );
 }
