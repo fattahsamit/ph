@@ -32,7 +32,7 @@ function ExternalUsers() {
   );
 }
 
-function User(props) {
+function User({ name, email }) {
   return (
     <div
       style={{
@@ -41,8 +41,8 @@ function User(props) {
         borderRadius: "15px",
       }}
     >
-      <h3>Name: {props.name}</h3>
-      <p>E-mail: {props.email}</p>
+      <h3>Name: {name}</h3>
+      <p>E-mail: {email}</p>
     </div>
   );
 }
@@ -79,12 +79,12 @@ function Counter() {
 //   <Product name={product.name} price={product.price}></Product>
 // ))}
 
-function Product(props) {
-  console.log(props);
+function Product({ name, price }) {
+  // console.log(props);
   return (
     <div className="product">
-      <h3>Name: {props.name}</h3>
-      <p>Price: {props.price}</p>
+      <h3>Name: {name}</h3>
+      <p>Price: {price}</p>
     </div>
   );
 }
