@@ -1,11 +1,48 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   return (
     <div className="App">
-      <Counter></Counter>
+      {/* <Counter></Counter> */}
+      <ExternalUsers></ExternalUsers>
+    </div>
+  );
+}
+
+function ExternalUsers() {
+  const [users, setUsers] = useState([]);
+  // useEffect(() => {}, []);
+  useEffect(() => {
+    const URL = "https://jsonplaceholder.typicode.com/users";
+    fetch(URL)
+      .then((res) => res.json())
+      .then((data) => setUsers(data));
+  }, []);
+
+  return (
+    <div>
+      <h2>External users</h2>
+      <p>{users.length}</p>
+      {users.map((user) => (
+        <User name={user.name} email={user.email}></User>
+      ))}
+    </div>
+  );
+}
+
+function User(props) {
+  return (
+    <div
+      style={{
+        border: "2px solid black",
+        margin: "20px",
+        borderRadius: "15px",
+      }}
+    >
+      <h3>Name: {props.name}</h3>
+      <p>E-mail: {props.email}</p>
     </div>
   );
 }
