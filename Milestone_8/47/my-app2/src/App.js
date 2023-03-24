@@ -1,24 +1,46 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
-  const products = [
-    { name: "Laptop", price: "70000" },
-    { name: "Phone", price: "22000" },
-    { name: "Watch", price: "1200" },
-    { name: "Tablet", price: "33000" },
-  ];
   return (
     <div className="App">
-      {products.map((product) => (
-        <Product name={product.name} price={product.price}></Product>
-      ))}
-      {/* <Product name="Laptop" price="70000"></Product>
-      <Product name="Phone" price="22000"></Product>
-      <Product name="Watch" price="1200"></Product> */}
+      <Counter></Counter>
     </div>
   );
 }
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  const increaseCount = () => setCount(count + 1);
+  const decreaseCount = () => setCount(count - 1);
+
+  // const [count, setCount] = useState(0);
+  // const increaseCount = () => {
+  //   const newCount = count + 1;
+  //   setCount(newCount);
+  // };
+
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={increaseCount}>Increase</button>
+      <button onClick={decreaseCount}>Decrease</button>
+    </div>
+  );
+}
+
+// const products = [
+//   { name: "Laptop", price: "70000" },
+//   { name: "Phone", price: "22000" },
+//   { name: "Watch", price: "1200" },
+//   { name: "Tablet", price: "33000" },
+// ];
+
+// {products.map((product) => (
+//   <Product name={product.name} price={product.price}></Product>
+// ))}
 
 function Product(props) {
   console.log(props);
