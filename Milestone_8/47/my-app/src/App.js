@@ -15,40 +15,32 @@ const singerStyle = {
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>JSX</h2>
-        <div className="container">
-          <p>Create React App</p>
-        </div>
-        <div className="music">
-          <p>Name: {6 + name}</p>
-          <p style={singerStyle}>
-            Name: {singer.name}, {singer.band}
-          </p>
-          <p
-            style={{
-              color: "white",
-              backgroundColor: "green",
-              padding: "10px",
-              borderRadius: "10px",
-            }}
-          >
-            Name: {singer2.name}, {singer2.job}
-          </p>
-        </div>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Person></Person>
+      <Person></Person>
+      <Person></Person>
+      <Person></Person>
+      <h2>New Component</h2>
+      <Friend></Friend>
+      <Friend></Friend>
+      <Friend></Friend>
+    </div>
+  );
+}
+
+function Person() {
+  return (
+    <div className="person">
+      <h1>Fattah Samit</h1>
+      <p>Software Engineer</p>
+    </div>
+  );
+}
+
+function Friend() {
+  return (
+    <div className="container">
+      <h1>Jason Mamoa</h1>
+      <p>Aquaman</p>
     </div>
   );
 }
