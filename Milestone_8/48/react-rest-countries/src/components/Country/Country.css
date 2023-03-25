@@ -1,6 +1,10 @@
 .country {
   margin: 20px;
   padding: 5px;
-  background-color: lightskyblue;
+  background-color: lightblue;
   border-radius: 16px;
+}
+
+.country img {
+  width: 150px;
 }
