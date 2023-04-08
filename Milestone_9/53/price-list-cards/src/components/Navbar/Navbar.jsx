@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "../Link/Link";
 
 const Navbar = () => {
   const routes = [
@@ -33,7 +34,7 @@ const Navbar = () => {
     <nav>
       <ul className="md:flex">
         {routes.map((route) => (
-          <li>{route.name}</li>
+          <Link key={route.id} route={route}></Link>
         ))}
       </ul>
     </nav>
