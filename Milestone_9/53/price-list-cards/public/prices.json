@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Basic",
+    "price": 20,
+    "features": ["Gym Access", "Locker Room Access", "Free Weights"]
+  },
+  {
+    "id": 2,
+    "name": "Advanced",
+    "price": 40,
+    "features": [
+      "Gym Access",
+      "Locker Room Access",
+      "Free Weights",
+      "Cardio Equipment",
+      "Personal Trainer"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Premium",
+    "price": 60,
+    "features": [
+      "Gym Access",
+      "Locker Room Access",
+      "Free Weights",
+      "Cardio Equipment",
+      "Personal Trainer",
+      "Pool Access",
+      "Sauna Access"
+    ]
+  }
+]
