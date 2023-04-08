@@ -6,20 +6,39 @@ import "./index.css";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import ErrorPage from "./error-page";
+import Home from "./components/Home/Home";
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App></App>,
+//     errorElement: <ErrorPage />,
+//   },
+//   {
+//     path: "/about",
+//     element: <About></About>,
+//   },
+//   {
+//     path: "/contact",
+//     element: <Contact></Contact>,
+//   },
+// ]);
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
+    element: <Home></Home>,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: "/about",
-    element: <About></About>,
-  },
-  {
-    path: "/contact",
-    element: <Contact></Contact>,
+    children: [
+      {
+        path: "about",
+        element: <About></About>,
+      },
+      {
+        path: "contact",
+        element: <Contact></Contact>,
+      },
+    ],
   },
 ]);
 
