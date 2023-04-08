@@ -34,13 +34,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-purple-400">
+    <nav className="bg-purple-400 px-4">
       <div className="md:hidden" onClick={() => setOpen(!open)}>
         <span>
           {open === true ? (
             <Bars3Icon className="h-6 w-6"></Bars3Icon>
           ) : (
-            <XMarkIcon className="h-6 w-6"></XMarkIcon>
+            <Bars3Icon className="h-6 w-6"></Bars3Icon>
           )}
         </span>
       </div>
