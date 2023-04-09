@@ -7,9 +7,11 @@ const Countries = () => {
   //   console.log(countries);
 
   return (
-    <div>
-      <h3>Total Countries: {countries.length}</h3>
-      <div className="grid grid-cols-4 gap-5">
+    <div className="my-10">
+      <h3 className="text-center text-3xl font-semibold">
+        Total Countries: {countries.length}
+      </h3>
+      <div className="grid grid-cols-4 gap-5 mt-5">
         {countries.map((country) => (
           <Country key={country.cca2} country={country}></Country>
         ))}

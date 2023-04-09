@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div>
+    <div className="flex gap-5 text-2xl font-bold py-2 px-2">
       <Link to="/">Home</Link>
       <Link to="/countries">Countries</Link>
       <Link to="/about">About</Link>
