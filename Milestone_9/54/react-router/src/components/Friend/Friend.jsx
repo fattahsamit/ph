@@ -11,9 +11,9 @@ const Friend = ({ friend }) => {
       <h3>{name}</h3>
       <p>E-mail: {email}</p>
       <p>Phone: {phone}</p>
-      <button>
-        <Link to={`/friend/${id}`}>Details</Link>
-      </button>
+      <Link to={`/friend/${id}`}>
+        <button>Details</button>
+      </Link>
     </div>
   );
 };
