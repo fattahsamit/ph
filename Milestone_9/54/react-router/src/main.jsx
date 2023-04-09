@@ -12,6 +12,7 @@ import Friends from "./components/Friends/Friends";
 import FriendDetail from "./components/FriendDetail/FriendDetail";
 import Posts from "./components/Posts/Posts";
 import PostDetail from "./components/PostDetail/PostDetail";
+import NotFound from "./components/NotFound/NotFound";
 
 // const router = createBrowserRouter([
 //   {
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "*",
+        element: <NotFound></NotFound>,
       },
     ],
   },
