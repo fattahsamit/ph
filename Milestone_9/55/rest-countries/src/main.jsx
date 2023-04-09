@@ -8,6 +8,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import First from "./components/First/First";
+import CountryDetail from "./components/CountryDetail/CountryDetail";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,12 @@ const router = createBrowserRouter([
         path: "countries",
         element: <Countries></Countries>,
         loader: () => fetch("https://restcountries.com/v3.1/all"),
+      },
+      {
+        path: "country/:countryId",
+        element: <CountryDetail></CountryDetail>,
+        loader: ({ params }) =>
+          fetch(`https://restcountries.com/v3.1/alpha/${params.countryId}`),
       },
       {
         path: "about",
