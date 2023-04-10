@@ -10,12 +10,16 @@ const Home = () => {
   const [cart, setCart] = useState([]);
 
   const handleAddToCart = (tshirt) => {
-    const newCart = [...cart, tshirt];
-    setCart(newCart);
+    const exists = cart.find((ts) => ts._id === tshirt._id);
+    if (exists) {
+    } else {
+      const newCart = [...cart, tshirt];
+      setCart(newCart);
+    }
   };
 
   const handleRemoveFromCart = (id) => {
-    const remaining = cart.filter((tshirt) => tshirt._id !== id);
+    const remaining = cart.filter((ts) => ts._id !== id);
     setCart(remaining);
   };
 
