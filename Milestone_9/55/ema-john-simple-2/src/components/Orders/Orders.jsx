@@ -8,7 +8,7 @@ const Orders = () => {
   return (
     <div className="shop-container">
       <div className="products-container">
-        <h2>Orders page: {products.length}</h2>
+        <h2>Orders page</h2>
       </div>
 
       <div className="cart-container">
