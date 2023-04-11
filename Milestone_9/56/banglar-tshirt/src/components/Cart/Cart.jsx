@@ -1,4 +1,5 @@
 import React from "react";
+import "./Cart.css";
 
 const Cart = ({ cart, handleRemoveFromCart }) => {
   // 1
@@ -15,10 +16,20 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
 
   return (
     <div>
-      <h2>Order Summary: {cart.length}</h2>
+      <h2 className={cart.length === 1 ? "blue" : "red"}>
+        Order Summary: {cart.length}
+      </h2>
+      <p className={`bold ${cart.length === 3 ? "green" : "purple"}`}>
+        Something
+      </p>
+
       {message}
       {/* 2 */}
-      {cart.length > 2 ? <span>Borolok</span> : <span>Fokirnni</span>}
+      {cart.length > 2 ? (
+        <span className="purple">Borolok</span>
+      ) : (
+        <span>Fokirnni</span>
+      )}
 
       {cart.map((tshirt) => (
         <p key={tshirt._id}>
@@ -44,5 +55,11 @@ export default Cart;
   2. Ternary Operator = condition ? 'for true' : 'false'
   3. Logical && = (if the condition is true then the next thing will be displayed)
   4. Logical || = (if the condition is false then the next thing will be displayed)
+*/
 
+/*
+    Conditional CSS Class
+  =========================
+  1. Use Ternary 
+  2. Ternary inside template string
 */
