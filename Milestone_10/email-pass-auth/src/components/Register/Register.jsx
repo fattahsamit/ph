@@ -3,15 +3,26 @@ import React, { useState } from "react";
 const Register = () => {
   const [email, setEmail] = useState("");
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.pass.value;
+    console.log(email, password);
+  };
+
   const handleEmailChange = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setEmail(event.target.value);
+  };
+
+  const handlePasswordBlur = (event) => {
+    // console.log(event.target.value);
   };
 
   return (
     <div>
       <h4>Please Register</h4>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           onChange={handleEmailChange}
           type="email"
@@ -21,6 +32,7 @@ const Register = () => {
         />
         <br />
         <input
+          onBlur={handlePasswordBlur}
           type="password"
           name="pass"
           id="pass"
