@@ -27,7 +27,7 @@ const Header = () => {
         to="/register-rbs"
         className={({ isActive }) => (isActive ? "active" : "default")}
       >
-        Register
+        Register RBS
       </NavLink>
     </nav>
   );
