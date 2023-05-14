@@ -29,6 +29,12 @@ const Header = () => {
       >
         Register RBS
       </NavLink>
+      <NavLink
+        to="/register-bs"
+        className={({ isActive }) => (isActive ? "active" : "default")}
+      >
+        Register BS
+      </NavLink>
     </nav>
   );
 };
