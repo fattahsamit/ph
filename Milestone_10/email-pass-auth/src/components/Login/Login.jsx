@@ -1,4 +1,9 @@
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
+import app from "../firebase/firebase.config";
+import { Link } from "react-router-dom";
+
+const auth = getAuth(app);
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -28,6 +33,16 @@ const Login = () => {
       setError("Password must be 6 characters long");
       return;
     }
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        setSuccess("User logged in successfully");
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   return (
@@ -68,6 +83,11 @@ const Login = () => {
           Login
         </button>
       </form>
+      <p>
+        <small>
+          New to this website? Please <Link to="/register">Register</Link>
+        </small>
+      </p>
       <p className="text-danger">{error}</p>
       <p className="text-success">{success}</p>
     </div>
