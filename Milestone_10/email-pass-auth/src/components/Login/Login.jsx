@@ -3,7 +3,7 @@ import {
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import app from "../firebase/firebase.config";
 import { Link } from "react-router-dom";
 
@@ -41,8 +41,8 @@ const Login = () => {
     }
 
     signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        const loggedUser = result.user;
+      .then(() => {
+        // const loggedUser = result.user;
         setSuccess("User logged in successfully");
         setError("");
       })
@@ -51,7 +51,7 @@ const Login = () => {
       });
   };
 
-  const showPassword = (event) => {
+  const showPassword = () => {
     const pass = passRef.current.type;
     console.log(pass);
     if (pass === "password") {
@@ -61,7 +61,7 @@ const Login = () => {
     }
   };
 
-  const handleResetPassword = (event) => {
+  const handleResetPassword = () => {
     const email = emailRef.current.value;
     if (!email) {
       alert("Please provide your email address to reset password");
