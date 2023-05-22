@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  sendEmailVerification,
+} from "firebase/auth";
 import app from "../firebase/firebase.config";
 import { Link } from "react-router-dom";
 
@@ -38,11 +42,22 @@ const Register = () => {
         setError("");
         event.target.reset();
         setSuccess("User has been created successfully!");
+        sendVerificationEmail(loggedUser);
       })
       .catch((error) => {
         console.error(error.message);
         setError(error.message);
       });
+  };
+
+  const sendVerificationEmail = (user) => {
+    sendEmailVerification(user).then(() => {
+      // Email verification sent!
+      (result) => {
+        console.log(result);
+        alert("please verify your email address");
+      };
+    });
   };
 
   const handleEmailChange = (event) => {
