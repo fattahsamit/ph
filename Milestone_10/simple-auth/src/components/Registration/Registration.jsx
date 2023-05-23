@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4 text-center">Registration</h2>
-      <form className="max-w-md mx-auto">
+      <form className="max-w-md mx-auto flex flex-col">
         <div className="mb-4 flex flex-col">
           <label htmlFor="name" className="text-sm font-medium mb-1">
             Name
@@ -41,9 +42,16 @@ const Registration = () => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary w-1/2 mx-auto mb-3">
           Register
         </button>
+        <small className="text-center">
+          Already have an account?{" "}
+          <Link to={"/login"} className="text-primary">
+            Login
+          </Link>{" "}
+          here
+        </small>
       </form>
     </div>
   );
