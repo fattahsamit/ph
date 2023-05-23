@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Registration = () => {
   return (
-    <div className="w-9/12 mx-auto my-5">
+    <div>
       <h2 className="text-2xl font-bold mb-4 text-center">Registration</h2>
       <form className="max-w-md mx-auto">
         <div className="mb-4 flex flex-col">
