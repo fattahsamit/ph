@@ -13,8 +13,11 @@ const Register = () => {
 
   return (
     <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col-reverse lg:flex-row gap-14">
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <div className="hero-content flex-col gap-5">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold">Please Register!</h1>
+        </div>
+        <div className="card w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleRegister} className="card-body">
             <div className="form-control">
               <label className="label">
@@ -52,10 +55,7 @@ const Register = () => {
                 required
               />
               <label className="label">
-                <Link
-                  to="/login"
-                  className="label-text-alt link link-primary link-hover"
-                >
+                <Link to="/login" className="label-text-alt link link-hover">
                   Already have an account?
                 </Link>
               </label>
@@ -64,9 +64,6 @@ const Register = () => {
               <button className="btn btn-primary">Register</button>
             </div>
           </form>
-        </div>
-        <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Please Register!</h1>
         </div>
       </div>
     </div>
