@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../providers/AuthProviders";
 
 const Login = () => {
-  const { signIn } = useContext(UserContext);
+  const { signIn, signInWithGoogle } = useContext(UserContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -18,6 +18,16 @@ const Login = () => {
         console.log(loggedUser);
 
         form.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleGoogleSignIn = (event) => {
+    signInWithGoogle()
+      .then((result) => {
+        const loggedUser = result.user;
       })
       .catch((error) => {
         console.log(error);
@@ -56,20 +66,26 @@ const Login = () => {
                 required
               />
               <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
+                <a className="label-text-alt link link-hover">
                   Forgot password?
                 </a>
               </label>
-              <label className="label">
-                <Link to="/register" className="label-text-alt link link-hover">
-                  Don't have an account?
-                </Link>
-              </label>
             </div>
-            <div className="form-control mt-6">
+            <div className="form-control mt-2">
               <button className="btn btn-primary">Login</button>
             </div>
           </form>
+          <p className="mb-4 ml-8">
+            <Link to="/register" className="label-text-alt link link-hover">
+              Don't have an account?
+            </Link>
+          </p>
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn btn-secondary w-4/5 mx-auto mb-5"
+          >
+            Google
+          </button>
         </div>
       </div>
     </div>
