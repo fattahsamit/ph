@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { UserContext } from "../providers/AuthProviders";
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <div>
-      <h2>This is Home {user && <span>{user.displayName}</span>}</h2>
+      <h2>This is Home {user && <span>{user.email}</span>}</h2>
     </div>
   );
 };
